@@ -55,7 +55,7 @@ export default function Home() {
         <motion.div
           className="absolute inset-0 w-full h-full"
           style={{
-            backgroundImage: "url('/abtHomeImg.png')",
+            backgroundImage: "./abtHomeImg.png",
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
@@ -113,7 +113,7 @@ export default function Home() {
           {/* Experience 1 */}
           <div className="h-[50vh] w-full relative flex items-center justify-center px-4 py-6 text-center my-2">
             <Image
-              src="/ttdDiv1Img1.png"
+              src="./ttdDiv1Img1.png"
               alt="ttdDiv1Img1"
               fill
               sizes="100vw"
@@ -130,7 +130,7 @@ export default function Home() {
           {/* Experience 2 */}
           <div className="h-[50vh] w-full relative flex items-center justify-center px-4 py-6 text-center my-2">
             <Image
-              src="/ttdDiv1Img2.png"
+              src="./ttdDiv1Img2.png"
               alt="ttdDiv1Img2"
               fill
               sizes="100vw"
@@ -147,7 +147,7 @@ export default function Home() {
           {/* Experience 3 */}
           <div className="h-[50vh] w-full relative flex items-center justify-center px-4 py-6 text-center my-2">
             <Image
-              src="/ttdDiv1Img3.png"
+              src="./ttdDiv1Img3.png"
               alt="ttdDiv1Img3"
               fill
               sizes="100vw"
@@ -164,7 +164,7 @@ export default function Home() {
           {/* Experience 4 */}
           <div className="h-[50vh] w-full relative flex items-center justify-center px-4 py-6 text-center my-2">
             <Image
-              src="/ttdDiv1Img4.png"
+              src="./ttdDiv1Img4.png"
               alt="ttdDiv1Img4"
               fill
               sizes="100vw"
@@ -181,7 +181,7 @@ export default function Home() {
           {/* Experience 5 */}
           <div className="h-[50vh] w-full relative flex items-center justify-center px-4 py-6 text-center my-2">
             <Image
-              src="/ttdDiv1Img5.png"
+              src="./ttdDiv1Img5.png"
               alt="ttdDiv1Img5"
               fill
               sizes="100vw"
@@ -198,7 +198,7 @@ export default function Home() {
           {/* Experience 6 */}
           <div className="h-[50vh] w-full relative flex items-center justify-center px-4 py-6 text-center my-2">
             <Image
-              src="/ttdDiv1Img6.png"
+              src="./ttdDiv1Img6.png"
               alt="ttdDiv1Img6"
               fill
               sizes="100vw"
@@ -222,7 +222,7 @@ export default function Home() {
             <div className="h-full w-1/3 flex items-center justify-center">
               <motion.div className="relative w-2/3 h-4/5 p-4">
                 <Image
-                  src="/ttdDiv1Img1.png"
+                  src="./ttdDiv1Img1.png"
                   alt={`ttdDiv1Img1`}
                   fill
                   sizes="100vw"
@@ -235,7 +235,7 @@ export default function Home() {
             <div className="h-full w-1/3 flex items-center justify-center">
               <motion.div className="relative w-2/3 h-4/5 p-4">
                 <Image
-                  src="/ttdDiv1Img2.png"
+                  src="./ttdDiv1Img2.png"
                   alt={`ttdDiv1Img2`}
                   fill
                   sizes="100vw"
@@ -256,7 +256,7 @@ export default function Home() {
             <div className="h-full w-1/3 flex items-center justify-center">
               <motion.div className="relative w-2/3 h-4/5 p-4">
                 <Image
-                  src="/ttdDiv1Img3.png"
+                  src="./ttdDiv1Img3.png"
                   alt={`ttdDiv1Img3`}
                   fill
                   sizes="100vw"
@@ -269,7 +269,7 @@ export default function Home() {
             <div className="h-full w-1/3 flex items-center justify-center">
               <motion.div className="relative w-2/3 h-4/5 p-4">
                 <Image
-                  src="/ttdDiv1Img4.png"
+                  src="./ttdDiv1Img4.png"
                   alt={`ttdDiv1Img4`}
                   fill
                   sizes="100vw"
@@ -290,7 +290,7 @@ export default function Home() {
             <div className="h-full w-1/3 flex items-center justify-center">
               <motion.div className="relative w-2/3 h-4/5 p-4">
                 <Image
-                  src="/ttdDiv1Img5.png"
+                  src="./ttdDiv1Img5.png"
                   alt={`ttdDiv1Img5`}
                   fill
                   sizes="100vw"
@@ -303,7 +303,7 @@ export default function Home() {
             <div className="h-full w-1/3 flex items-center justify-center">
               <motion.div className="relative w-2/3 h-4/5 p-4">
                 <Image
-                  src="/ttdDiv1Img6.png"
+                  src="./ttdDiv1Img6.png"
                   alt={`ttdDiv1Img6`}
                   fill
                   sizes="100vw"
