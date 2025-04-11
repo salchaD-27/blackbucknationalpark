@@ -7,7 +7,7 @@ const mont = Montserrat({weight: ['400', '700', '900'], style: ['normal', 'itali
 
 const features = [
   {
-    icon: "/homepageDiv7Icon1.png",
+    icon: "./homepageDiv7Icon1.png",
     title: "Tailor Made 100%",
     titleColor: "text-earth-dark-soil",
     descColor: "text-earth-faded-soil",
@@ -19,7 +19,7 @@ const features = [
     ],
   },
   {
-    icon: "/homepageDiv7Icon2.png",
+    icon: "./homepageDiv7Icon2.png",
     title: "Local Knowledge",
     titleColor: "text-earth-dark-green",
     descColor: "text-earth-faded-green",
@@ -30,7 +30,7 @@ const features = [
     ],
   },
   {
-    icon: "/homepageDiv7Icon3.png",
+    icon: "./homepageDiv7Icon3.png",
     title: "The Best Guides",
     titleColor: "text-earth-dark-blue",
     descColor: "text-earth-faded-blue",
@@ -41,7 +41,7 @@ const features = [
     ],
   },
   {
-    icon: "/homepageDiv7Icon4.png",
+    icon: "./homepageDiv7Icon4.png",
     title: "Service Pillar",
     titleColor: "text-earth-soil-red",
     descColor: "text-earth-faded-soil-red",
