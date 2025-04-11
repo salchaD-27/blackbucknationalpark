@@ -27,10 +27,10 @@ const lodgeFacs = [
 ];
 
 const div2Imgs = [
-  "/accPageDiv2Img1.png",
-  "/accPageDiv2Img2.png",
-  "/accPageDiv2Img3.png",
-  "/accPageDiv2Img4.png",
+  "./accPageDiv2Img1.png",
+  "./accPageDiv2Img2.png",
+  "./accPageDiv2Img3.png",
+  "./accPageDiv2Img4.png",
 ];
 
 export default function Home() {
@@ -110,7 +110,7 @@ export default function Home() {
         
         <div
           ref={div1Ref}
-          className={`h-[50vh] w-screen flex flex-col items-center justify-center bg-[url('/homePageDiv3img1.png')] bg-cover bg-center ${mont.className}`}
+          className={`h-[50vh] w-screen flex flex-col items-center justify-center bg-[./homePageDiv3img1.png] bg-cover bg-center ${mont.className}`}
         >
           <div className="w-full h-[47vh] flex flex-col items-center justify-center px-4 text-center">
             <div className="text-xs text-white font-semibold mb-4">The Blackbuck National Park withholds many beautiful lodges that are convenient, comfortable and luxurious in terms of hospitality, locality, in-house naturalist team and staff, and the commitment to preserve the wildlife and culture of Velavadar National Park.</div>
@@ -162,7 +162,7 @@ export default function Home() {
               className="relative w-1/3 h-2/3 p-4"
             >
               <Image
-                src="/homePageDiv3img1.png"
+                src="./homePageDiv3img1.png"
                 alt={`homePageDiv3img1`}
                 fill
                 sizes="100vw"
@@ -287,7 +287,7 @@ export default function Home() {
                     <div className={`h-full w-3/4 flex items-center justify-start gap-2`}>
                       <motion.div className={`relative w-1/20 h-1/4 p-4`}>
                         <Image
-                          src="/headerLogoInitialBlack.png"
+                          src="./headerLogoInitialBlack.png"
                           alt={`headerLogoInitialBlack`}
                           fill
                           sizes="100vw"
