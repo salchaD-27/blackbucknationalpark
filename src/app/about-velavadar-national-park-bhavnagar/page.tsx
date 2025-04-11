@@ -11,15 +11,15 @@ import { Montserrat, Montserrat_Alternates, Montserrat_Subrayada, Montserrat_Und
 const mont = Montserrat({weight: ['400', '700', '900'], style: ['normal', 'italic'], subsets: ['latin', 'latin-ext'], display: 'swap', variable: '--font-p', adjustFontFallback: true })
 
 const abtDiv2galleryImages = [
-  { id: 1, src: '/abtDiv2Gimg1.png', alt: 'abtDiv2Gimg1' },
-  { id: 2, src: '/abtDiv2Gimg2.png', alt: 'abtDiv2Gimg2' },
-  { id: 3, src: '/abtDiv2Gimg3.png', alt: 'abtDiv2Gimg3' },
-  { id: 4, src: '/abtDiv2Gimg4.png', alt: 'abtDiv2Gimg4' },
-  { id: 5, src: '/abtDiv2Gimg5.png', alt: 'abtDiv2Gimg5' },
-  { id: 6, src: '/abtDiv2Gimg6.png', alt: 'abtDiv2Gimg6' },
-  { id: 7, src: '/abtDiv2Gimg7.png', alt: 'abtDiv2Gimg7' },
-  { id: 8, src: '/abtDiv2Gimg8.png', alt: 'abtDiv2Gimg8' },
-  { id: 9, src: '/abtDiv2Gimg9.png', alt: 'abtDiv2Gimg9' },
+  { id: 1, src: './abtDiv2Gimg1.png', alt: 'abtDiv2Gimg1' },
+  { id: 2, src: './abtDiv2Gimg2.png', alt: 'abtDiv2Gimg2' },
+  { id: 3, src: './abtDiv2Gimg3.png', alt: 'abtDiv2Gimg3' },
+  { id: 4, src: './abtDiv2Gimg4.png', alt: 'abtDiv2Gimg4' },
+  { id: 5, src: './abtDiv2Gimg5.png', alt: 'abtDiv2Gimg5' },
+  { id: 6, src: './abtDiv2Gimg6.png', alt: 'abtDiv2Gimg6' },
+  { id: 7, src: './abtDiv2Gimg7.png', alt: 'abtDiv2Gimg7' },
+  { id: 8, src: './abtDiv2Gimg8.png', alt: 'abtDiv2Gimg8' },
+  { id: 9, src: './abtDiv2Gimg9.png', alt: 'abtDiv2Gimg9' },
 ];
 
 export default function Home() {
@@ -94,7 +94,7 @@ export default function Home() {
         <motion.div
           className="absolute inset-0 w-full h-full"
           style={{
-            backgroundImage: "url('/abtHomeImg.png')",
+            backgroundImage: "./abtHomeImg.png",
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
@@ -140,7 +140,7 @@ export default function Home() {
         {mobileView ? (
           <div className="h-[50vh] w-full relative flex items-center justify-center px-4 py-6 text-center">
             <Image
-              src="/abtDiv1Img1.png"
+              src="./abtDiv1Img1.png"
               alt="abtDiv1Img1"
               fill
               sizes="100vw"
@@ -164,7 +164,7 @@ export default function Home() {
             <div className="h-full w-1/3 flex items-center justify-center">
               <motion.div className="relative w-2/3 h-4/5 p-4">
                 <Image
-                  src="/abtDiv1Img1.png"
+                  src="./abtDiv1Img1.png"
                   alt="abtDiv1Img1"
                   fill
                   sizes="100vw"
@@ -187,7 +187,7 @@ export default function Home() {
         {mobileView ? (
           <div className="h-[50vh] w-full relative flex items-center justify-center px-4 py-6 text-center">
             <Image
-              src="/abtDiv1Img3.png"
+              src="./abtDiv1Img3.png"
               alt="abtDiv1Img3"
               fill
               sizes="100vw"
@@ -211,7 +211,7 @@ export default function Home() {
             <div className="h-full w-1/3 flex items-center justify-center">
               <motion.div className="relative w-2/3 h-4/5 p-4">
                 <Image
-                  src="/abtDiv1Img3.png"
+                  src="./abtDiv1Img3.png"
                   alt="abtDiv1Img3"
                   fill
                   sizes="100vw"
@@ -225,7 +225,7 @@ export default function Home() {
         {mobileView ? (
           <div className="h-[50vh] w-full relative flex items-center justify-center px-4 py-6 text-center my-2">
             <Image
-              src="/abtDiv1Img4.png"
+              src="./abtDiv1Img4.png"
               alt="abtDiv1Img4"
               fill
               sizes="100vw"
@@ -249,7 +249,7 @@ export default function Home() {
             <div className="h-full w-1/3 flex items-center justify-center">
               <motion.div className="relative w-2/3 h-4/5 p-4">
                 <Image
-                  src="/abtDiv1Img4.png"
+                  src="./abtDiv1Img4.png"
                   alt="abtDiv1Img4"
                   fill
                   sizes="100vw"
@@ -263,7 +263,7 @@ export default function Home() {
         {mobileView ? (
           <div className="h-[50vh] w-full relative flex items-center justify-center px-4 py-6 text-center">
             <Image
-              src="/abtDiv1Img5.png"
+              src="./abtDiv1Img5.png"
               alt="abtDiv1Img5"
               fill
               sizes="100vw"
@@ -287,7 +287,7 @@ export default function Home() {
             <div className="h-full w-1/3 flex items-center justify-center">
               <motion.div className="relative w-2/3 h-4/5 p-4">
                 <Image
-                  src="/abtDiv1Img5.png"
+                  src="./abtDiv1Img5.png"
                   alt="abtDiv1Img5"
                   fill
                   sizes="100vw"
