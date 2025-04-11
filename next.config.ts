@@ -10,6 +10,9 @@ const nextConfig: NextConfig = {
     unoptimized: true, // only needed if you're using next/image
   },
   trailingSlash: true, 
+  publicRuntimeConfig: {
+    basePath: isProd ? '/blackbucknationalpark' : '',
+  }
 };
 
 export default nextConfig;
