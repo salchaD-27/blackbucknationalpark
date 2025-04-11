@@ -53,12 +53,12 @@ const galleryImages = [
 ];
 
 const div4Images = [
-  { id: 1, src: '/homePageDiv4img1.png', alt: 'div4img', text: "Jeep Safari" },
-  { id: 2, src: '/homePageDiv4img2.png', alt: 'div4img', text: "Nature Walk" },
-  { id: 3, src: '/homePageDiv4img3.png', alt: 'div4img', text: "Picnic Meals" },
-  { id: 4, src: '/homePageDiv4img4.png', alt: 'div4img', text: "Interactive Session" },
-  { id: 5, src: '/homePageDiv4img5.png', alt: 'div4img', text: "Farm Visits" },
-  { id: 6, src: '/homePageDiv4img6.png', alt: 'div4img', text: "Cycling Trails" },
+  { id: 1, src: './homePageDiv4img1.png', alt: 'div4img', text: "Jeep Safari" },
+  { id: 2, src: './homePageDiv4img2.png', alt: 'div4img', text: "Nature Walk" },
+  { id: 3, src: './homePageDiv4img3.png', alt: 'div4img', text: "Picnic Meals" },
+  { id: 4, src: './homePageDiv4img4.png', alt: 'div4img', text: "Interactive Session" },
+  { id: 5, src: './homePageDiv4img5.png', alt: 'div4img', text: "Farm Visits" },
+  { id: 6, src: './homePageDiv4img6.png', alt: 'div4img', text: "Cycling Trails" },
 ];
 
 const faqs = [
@@ -297,7 +297,7 @@ export default function Home() {
               animate={(div1InView||div2InView) ? { x: 0, y: 0, opacity: 1 } : {}}
               transition={{ duration: 1.4, ease: "easeOut", type: "spring", stiffness: 77, damping: 17 }}
               >
-              <Image src="/lpimg3.png" alt={`lpimg1`} fill sizes="100vw" className="object-contain transition-all duration-300"/>
+              <Image src="./lpimg3.png" alt={`lpimg1`} fill sizes="100vw" className="object-contain transition-all duration-300"/>
             </motion.div>            
           </div>
         </>
