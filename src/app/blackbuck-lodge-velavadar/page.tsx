@@ -11,35 +11,35 @@ import { Montserrat, Montserrat_Alternates, Montserrat_Subrayada, Montserrat_Und
 const mont = Montserrat({weight: ['400', '700', '900'], style: ['normal', 'italic'], subsets: ['latin', 'latin-ext'], display: 'swap', variable: '--font-p', adjustFontFallback: true })
 
 const div0Imgs = [
-  { src: "/blvDiv0img1.png"},
-  { src: "/blvDiv0img2.png"},
-  { src: "/blvDiv0img3.png"},
-  { src: "/blvDiv0img4.png"},
+  { src: "./blvDiv0img1.png"},
+  { src: "./blvDiv0img2.png"},
+  { src: "./blvDiv0img3.png"},
+  { src: "./blvDiv0img4.png"},
 ];
 
 const div4imgs = [
-  {src: "/blvDiv4img2.png", desc: "Wildlife Safari"},
-  {src: "/blvDiv4img3.png", desc: "Hot and Cold Water Supply"},
-  {src: "/blvDiv4img4.png", desc: "Multi Cuisine Restaurant"},
-  {src: "/blvDiv4img5.png", desc: "Organic Toiletries"},
-  {src: "/blvDiv4img6.png", desc: "Room Air Conditioning"},
-  {src: "/blvDiv4img7.png", desc: "Car Parking"},
-  {src: "/blvDiv4img8.png", desc: "Tea Coffee Maker"},
-  {src: "/blvDiv4img9.png", desc: "Security Emphasized"},
-  {src: "/blvDiv4img10.png", desc: "WiFi"},
-  {src: "/blvDiv4img1.png", desc: "COVID-19 Preparedness"},
+  {src: "./blvDiv4img2.png", desc: "Wildlife Safari"},
+  {src: "./blvDiv4img3.png", desc: "Hot and Cold Water Supply"},
+  {src: "./blvDiv4img4.png", desc: "Multi Cuisine Restaurant"},
+  {src: "./blvDiv4img5.png", desc: "Organic Toiletries"},
+  {src: "./blvDiv4img6.png", desc: "Room Air Conditioning"},
+  {src: "./blvDiv4img7.png", desc: "Car Parking"},
+  {src: "./blvDiv4img8.png", desc: "Tea Coffee Maker"},
+  {src: "./blvDiv4img9.png", desc: "Security Emphasized"},
+  {src: "./blvDiv4img10.png", desc: "WiFi"},
+  {src: "./blvDiv4img1.png", desc: "COVID-19 Preparedness"},
 ]
 
 const div5GalleryImages = [
-  { id: 1, src: '/blvdiv5img1.png', alt: 'blvdiv5img1' },
-  { id: 2, src: '/blvdiv5img2.png', alt: 'blvdiv5img2' },
-  { id: 3, src: '/blvdiv5img3.png', alt: 'blvdiv5img3' },
-  { id: 4, src: '/blvdiv5img4.png', alt: 'blvdiv5img4' },
-  { id: 5, src: '/blvdiv5img5.png', alt: 'blvdiv5img5' },
-  { id: 6, src: '/blvdiv5img6.png', alt: 'blvdiv5img6' },
-  { id: 7, src: '/blvdiv5img7.png', alt: 'blvdiv5img7' },
-  { id: 8, src: '/blvdiv5img8.png', alt: 'blvdiv5img8' },
-  { id: 9, src: '/blvdiv5img9.png', alt: 'blvdiv5img9' },
+  { id: 1, src: './blvdiv5img1.png', alt: 'blvdiv5img1' },
+  { id: 2, src: './blvdiv5img2.png', alt: 'blvdiv5img2' },
+  { id: 3, src: './blvdiv5img3.png', alt: 'blvdiv5img3' },
+  { id: 4, src: './blvdiv5img4.png', alt: 'blvdiv5img4' },
+  { id: 5, src: './blvdiv5img5.png', alt: 'blvdiv5img5' },
+  { id: 6, src: './blvdiv5img6.png', alt: 'blvdiv5img6' },
+  { id: 7, src: './blvdiv5img7.png', alt: 'blvdiv5img7' },
+  { id: 8, src: './blvdiv5img8.png', alt: 'blvdiv5img8' },
+  { id: 9, src: './blvdiv5img9.png', alt: 'blvdiv5img9' },
 ]
 
 const faqs = [
@@ -215,7 +215,7 @@ export default function Home() {
           >
             <motion.span 
               className="relative z-10 text-earth-dark-soil pl-6"
-              style={{ backgroundImage: "url('/callIconEarthDarkSoil.png')", backgroundRepeat: "no-repeat", backgroundSize: "contain" }}
+              style={{ backgroundImage: "./callIconEarthDarkSoil.png", backgroundRepeat: "no-repeat", backgroundSize: "contain" }}
             >
               <Link href="tel:8860680660" passHref>Call Now to Book +91-8860680660</Link>
             </motion.span>
@@ -227,7 +227,7 @@ export default function Home() {
           <div className="h-1/2 w-full flex flex-col items-center justify-center">
             <motion.div className="relative w-3/4 h-3/4 p-4 flex flex-col items-center justify-center">
               <Image
-                src="/blvDiv1img1.png"
+                src="./blvDiv1img1.png"
                 alt={`blvDiv1img1`}
                 fill
                 sizes="100vw"
@@ -312,7 +312,7 @@ export default function Home() {
             <span className={`text-white ${mobileView?"text-base":"text-xl"} font-bold`}>Book Velavadar Hotels Resorts now!</span>
             <motion.div className="relative w-4/5 h-2/3 p-4 flex flex-col items-center justify-center">
               <Image
-                src="/homepageDiv2lodge1.png"
+                src="./homepageDiv2lodge1.png"
                 alt={`blvDiv0img1`}
                 fill
                 sizes="100vw"
