@@ -9,13 +9,13 @@ import { Montserrat, Montserrat_Alternates, Montserrat_Subrayada, Montserrat_Und
 const mont = Montserrat({weight: ['400', '700', '900'], style: ['normal', 'italic'], subsets: ['latin', 'latin-ext'], display: 'swap', variable: '--font-p', adjustFontFallback: true })
 
 const socialLinks = [
-    { src: "/accPageDiv4facebook.png", alt: "Facebook", link: "/privacy" },
-    { src: "/accPageDiv4x.png", alt: "X (Twitter)", link: "/privacy" },
-    { src: "/accPageDiv4insta.png", alt: "Instagram", link: "/privacy" },
-    { src: "/accPageDiv4linkedin.png", alt: "LinkedIn", link: "/privacy" },
-    { src: "/accPageDiv4pinterest.png", alt: "Pinterest", link: "/privacy" },
-    { src: "/accPageDiv4reddit.png", alt: "Reddit", link: "/privacy" },
-    { src: "/accPageDiv4trip.png", alt: "TripAdvisor", link: "/privacy" },
+    { src: "./accPageDiv4facebook.png", alt: "Facebook", link: "/privacy" },
+    { src: "./accPageDiv4x.png", alt: "X (Twitter)", link: "/privacy" },
+    { src: "./accPageDiv4insta.png", alt: "Instagram", link: "/privacy" },
+    { src: "./accPageDiv4linkedin.png", alt: "LinkedIn", link: "/privacy" },
+    { src: "./accPageDiv4pinterest.png", alt: "Pinterest", link: "/privacy" },
+    { src: "./accPageDiv4reddit.png", alt: "Reddit", link: "/privacy" },
+    { src: "./accPageDiv4trip.png", alt: "TripAdvisor", link: "/privacy" },
 ];
 
 export default function Footer(){
@@ -37,7 +37,7 @@ export default function Footer(){
                     <span className={`${mobileView?"text-sm":"text-base"} font-bold mb-4`}>Contact Us</span>
                     <div className="h-auto w-4/5 flex items-center justify-center">
                         <div className="h-full w-1/5 flex items-center justify-center">
-                            <Image src="/footermaps.png"  alt="footermaps" width={mobileView?20:27} height={mobileView?20:27} className="object-contain" />
+                            <Image src="./footermaps.png"  alt="footermaps" width={mobileView?20:27} height={mobileView?20:27} className="object-contain" />
                         </div>
                         <div className="h-auto w-4/5 flex flex-col items-start justify-center pr-4">
                             <span className={`${mobileView?"text-xs":"text-sm"} font-bold`}>Address</span>
@@ -47,7 +47,7 @@ export default function Footer(){
                     <div className="h-auto w-4/5 flex items-center justify-center">
                         <div className="h-full w-1/5 flex items-center justify-center">
                             <Image
-                            src="/footerphone.png"
+                            src="./footerphone.png"
                             alt="footerphone"
                             width={mobileView ? 20 : 27}
                             height={mobileView ? 20 : 27}
@@ -65,7 +65,7 @@ export default function Footer(){
                     <div className="h-auto w-4/5 flex items-center justify-center">
                         <div className="h-auto w-1/5 flex items-center justify-center">
                             <Image
-                            src="/footercall.png"
+                            src="./footercall.png"
                             alt="footercall"
                             width={mobileView ? 20 : 27}
                             height={mobileView ? 20 : 27}
@@ -83,7 +83,7 @@ export default function Footer(){
                     <div className="h-auto w-4/5 flex items-center justify-center">
                         <div className="h-auto w-1/5 flex items-center justify-center">
                             <Image
-                            src="/footeremail.png"
+                            src="./footeremail.png"
                             alt="footeremail"
                             width={mobileView ? 20 : 27}
                             height={mobileView ? 20 : 27}
