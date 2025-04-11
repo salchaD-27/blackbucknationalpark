@@ -18,10 +18,10 @@ const div3Info = [
 ];
 
 const div2Imgs = [
-  "/accPageDiv2Img1.png",
-  "/accPageDiv2Img2.png",
-  "/accPageDiv2Img3.png",
-  "/accPageDiv2Img4.png",
+  "./accPageDiv2Img1.png",
+  "./accPageDiv2Img2.png",
+  "./accPageDiv2Img3.png",
+  "./accPageDiv2Img4.png",
 ];
 
 export default function Home() {
@@ -69,7 +69,7 @@ export default function Home() {
         <motion.div
           className="absolute inset-0 w-full h-full"
           style={{
-            backgroundImage: "url('/abtHomeImg.png')",
+            backgroundImage: "./abtHomeImg.png",
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
@@ -115,7 +115,7 @@ export default function Home() {
           <>
             <div className="h-[50vh] w-full relative flex items-center justify-center px-4 py-6 text-center my-2">
               <Image
-                src="/wildDiv1Img1.png"
+                src="./wildDiv1Img1.png"
                 alt="wildDiv1Img1"
                 fill
                 sizes="100vw"
@@ -131,7 +131,7 @@ export default function Home() {
 
             <div className="h-[50vh] w-full relative flex items-center justify-center px-4 py-6 text-center my-2">
               <Image
-                src="/wildDiv1Img2.png"
+                src="./wildDiv1Img2.png"
                 alt="wildDiv1Img2"
                 fill
                 sizes="100vw"
@@ -164,7 +164,7 @@ export default function Home() {
               <div className="h-full w-1/3 flex items-center justify-center">
                 <motion.div className="relative w-2/3 h-4/5 p-4">
                   <Image
-                    src="/wildDiv1Img1.png"
+                    src="./wildDiv1Img1.png"
                     alt="wildDiv1Img1"
                     fill
                     sizes="100vw"
@@ -191,7 +191,7 @@ export default function Home() {
               <div className="h-full w-1/3 flex items-center justify-center">
                 <motion.div className="relative w-2/3 h-4/5 p-4">
                   <Image
-                    src="/wildDiv1Img2.png"
+                    src="./wildDiv1Img2.png"
                     alt="wildDiv1Img2"
                     fill
                     sizes="100vw"
