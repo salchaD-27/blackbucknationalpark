@@ -125,7 +125,7 @@ export default function Header({div0View}:HeaderProps){
           transition={{ type: "spring", stiffness: 180, damping: 14 }}
         >
           <Image
-            src={div0View ? "/headerLogoInitialWhite.png" : "/headerLogoInitialBlack.png"}
+            src={div0View ? "./headerLogoInitialWhite.png" : "./headerLogoInitialBlack.png"}
             alt="Safari Logo"
             height={div0View ? 110 : 38}
             width={div0View ? 110 : 38}
@@ -135,7 +135,7 @@ export default function Header({div0View}:HeaderProps){
       ) : (
         <motion.button
           className={`w-1/2 h-3/5 bg-contain bg-center text-black text-3xl font-extrabold cursor-pointer relative overflow-hidden`}
-          style={{ backgroundImage: `url('${div0View ? "/headerLogoInitialWhite.png" : "/headerLogoInitialBlack.png"}')`, backgroundRepeat: "no-repeat" }}
+          style={{ backgroundImage: `url('${div0View ? "./headerLogoInitialWhite.png" : "./headerLogoInitialBlack.png"}')`, backgroundRepeat: "no-repeat" }}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.7, opacity: 0.77 }}
           transition={{ type: "spring", stiffness: 254, damping: 17 }}
