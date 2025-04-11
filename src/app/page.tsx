@@ -31,9 +31,9 @@ const bgConfig=[
 ]
 
 const images = [
-  { src: "./lpimg1.png", bgClass: "lp-img-1", info: <Lpimg1/>, link: "/"},
-  { src: "./lpimg2.png", bgClass: "lp-img-2", info: <Lpimg2/>, link: "/things-to-do-velavadar-park"},
-  { src: "./lpimg3.png", bgClass: "lp-img-3", info: <Lpimg3/>, link: "/about-velavadar-national-park-bhavnagar"}
+  { src: "/lpimg1.png", bgClass: "lp-img-1", info: <Lpimg1/>, link: "/"},
+  { src: "/lpimg2.png", bgClass: "lp-img-2", info: <Lpimg2/>, link: "/things-to-do-velavadar-park"},
+  { src: "/lpimg3.png", bgClass: "lp-img-3", info: <Lpimg3/>, link: "/about-velavadar-national-park-bhavnagar"}
 ];
 
 const galleryImages = [
