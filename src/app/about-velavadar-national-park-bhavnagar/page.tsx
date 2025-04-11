@@ -94,7 +94,7 @@ export default function Home() {
         <motion.div
           className="absolute inset-0 w-full h-full"
           style={{
-            backgroundImage: "url('/blackbucknationalpark/abtHomeImg.png')",
+            backgroundImage: "url('./blackbucknationalpark/abtHomeImg.png')",
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
