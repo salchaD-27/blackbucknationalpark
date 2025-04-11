@@ -48,7 +48,7 @@ export default function Home() {
         <motion.div
           className="absolute inset-0 w-full h-full"
           style={{
-            backgroundImage: "url('/abtHomeImg.png')",
+            backgroundImage: "./abtHomeImg.png",
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
