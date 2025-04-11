@@ -78,7 +78,7 @@ export default function Home() {
           <motion.div
             className="absolute inset-0 w-full h-full"
             style={{
-              backgroundImage: `url("${basePath}/lpimg3.png')`,
+              backgroundImage: `url('${basePath}/lpimg3.png')`,
               backgroundPosition: "center",
               backgroundSize: "cover",  
               backgroundRepeat: "no-repeat",
