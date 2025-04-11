@@ -10,10 +10,7 @@ import ByRail from './components/ByRail';
 import ByRoad from './components/ByRoad';
 import Link from 'next/link';
 
-import getConfig from 'next/config';
-
-const { publicRuntimeConfig } = getConfig();
-const basePath = publicRuntimeConfig.basePath || '';
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 import { Montserrat, Montserrat_Alternates, Montserrat_Subrayada, Montserrat_Underline } from 'next/font/google'
 const mont = Montserrat({weight: ['400', '700', '900'], style: ['normal', 'italic'], subsets: ['latin', 'latin-ext'], display: 'swap', variable: '--font-p', adjustFontFallback: true })
