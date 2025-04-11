@@ -10,19 +10,19 @@ import { Montserrat, Montserrat_Alternates, Montserrat_Subrayada, Montserrat_Und
 const mont = Montserrat({weight: ['400', '700', '900'], style: ['normal', 'italic'], subsets: ['latin', 'latin-ext'], display: 'swap', variable: '--font-p', adjustFontFallback: true })
 
 const div1Imgs = [
-  "/safPageDiv2Img1.png",
-  "/safPageDiv2Img2.png",
-  "/safPageDiv2Img3.png",
-  "/safPageDiv2Img4.png",
-  "/safPageDiv2Img5.png",
-  "/safPageDiv2Img6.png",
-  "/safPageDiv2Img7.png",
-  "/safPageDiv2Img8.png",
-  "/safPageDiv2Img9.png",
-  "/safPageDiv2Img10.png",
-  "/safPageDiv2Img11.png",
-  "/safPageDiv2Img12.png",
-  "/safPageDiv2Img13.png",
+  "./safPageDiv2Img1.png",
+  "./safPageDiv2Img2.png",
+  "./safPageDiv2Img3.png",
+  "./safPageDiv2Img4.png",
+  "./safPageDiv2Img5.png",
+  "./safPageDiv2Img6.png",
+  "./safPageDiv2Img7.png",
+  "./safPageDiv2Img8.png",
+  "./safPageDiv2Img9.png",
+  "./safPageDiv2Img10.png",
+  "./safPageDiv2Img11.png",
+  "./safPageDiv2Img12.png",
+  "./safPageDiv2Img13.png",
 ];
 
 export default function Home() {
@@ -70,7 +70,7 @@ export default function Home() {
         <motion.div
           className="absolute inset-0 w-full h-full"
           style={{
-            backgroundImage: "url('/abtHomeImg.png')",
+            backgroundImage: "./abtHomeImg.png",
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
