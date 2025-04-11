@@ -31,9 +31,9 @@ const bgConfig=[
 ]
 
 const images = [
-  { src: "/lpimg1.png", bgClass: "lp-img-1", info: <Lpimg1/>, link: "/"},
-  { src: "/lpimg2.png", bgClass: "lp-img-2", info: <Lpimg2/>, link: "/things-to-do-velavadar-park"},
-  { src: "/lpimg3.png", bgClass: "lp-img-3", info: <Lpimg3/>, link: "/about-velavadar-national-park-bhavnagar"}
+  { src: "./lpimg1.png", bgClass: "lp-img-1", info: <Lpimg1/>, link: "/"},
+  { src: "./lpimg2.png", bgClass: "lp-img-2", info: <Lpimg2/>, link: "/things-to-do-velavadar-park"},
+  { src: "./lpimg3.png", bgClass: "lp-img-3", info: <Lpimg3/>, link: "/about-velavadar-national-park-bhavnagar"}
 ];
 
 const galleryImages = [
@@ -305,7 +305,7 @@ export default function Home() {
         <>
           <div ref={div1Ref} className={`h-[50vh] w-full relative flex items-center justify-center px-4 py-6 text-center ${mont.className}`}>
             <Image
-              src="/lpimg3.png"
+              src="./lpimg3.png"
               alt="Velavadar National Park"
               fill
               sizes="100vw"
