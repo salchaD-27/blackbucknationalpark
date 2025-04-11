@@ -12,7 +12,7 @@ export default function FixedFeatures(){
             <motion.div
             className="fixed bottom-[77px] right-[14px] h-[50px] w-[50px] rounded-full z-[9999] cursor-pointer transition-all duration-300 ease-in-out"
             style={{
-                backgroundImage: whatsappTrue ? "url('./closeIcon.png')" : "url('./whatsappIcon.png')",
+                backgroundImage: whatsappTrue ? "./closeIcon.png" : "./whatsappIcon.png",
                 backgroundPosition: "center",
                 backgroundSize: whatsappTrue ? "50%" : "contain",
                 backgroundRepeat: "no-repeat"
@@ -29,7 +29,7 @@ export default function FixedFeatures(){
             <div
                 className="fixed bottom-[138px] right-[14px] h-[50px] w-[50px] rounded-full z-[9999] cursor-pointer transition-all duration-300 ease-in-out"
                 style={{
-                backgroundImage: "url('./callUsIcon.png')",
+                backgroundImage: "'./callUsIcon.png",
                 backgroundPosition: "center",
                 backgroundSize: "contain",
                 backgroundRepeat: "no-repeat"
@@ -49,7 +49,7 @@ export default function FixedFeatures(){
                     transition={{ duration: 0.3 }}
                     className="fixed bottom-[27px] right-[107px] h-[269px] w-[347px] text-white text-3xl z-[999] flex items-center justify-center"
                     style={{
-                        backgroundImage: "url('./whatsappContent.png')",
+                        backgroundImage: "./whatsappContent.png",
                         backgroundPosition: "center",
                         backgroundSize: "contain",
                         backgroundRepeat: "no-repeat"
