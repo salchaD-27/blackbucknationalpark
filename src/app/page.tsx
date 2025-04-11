@@ -37,19 +37,19 @@ const images = [
 ];
 
 const galleryImages = [
-  { id: 1, src: '/homePageDiv3img1.png', alt: 'div4img' },
-  { id: 2, src: '/homePageDiv3img2.png', alt: 'div4img' },
-  { id: 3, src: '/homePageDiv3img3.png', alt: 'div4img' },
-  { id: 4, src: '/homePageDiv3img4.png', alt: 'div4img' },
-  { id: 5, src: '/homePageDiv3img5.png', alt: 'div4img' },
-  { id: 6, src: '/homePageDiv3img6.png', alt: 'div4img' },
-  { id: 7, src: '/homePageDiv3img7.png', alt: 'div4img' },
-  { id: 8, src: '/homePageDiv3img8.png', alt: 'div4img' },
-  { id: 9, src: '/homePageDiv3img9.png', alt: 'div4img' },
-  { id: 10, src: '/homePageDiv3img10.png', alt: 'div4img' },
-  { id: 11, src: '/homePageDiv3img11.png', alt: 'div4img' },
-  { id: 12, src: '/homePageDiv3img12.png', alt: 'div4img' },
-  { id: 13, src: '/homePageDiv3img13.png', alt: 'div4img' },
+  { id: 1, src: './homePageDiv3img1.png', alt: 'div4img' },
+  { id: 2, src: './homePageDiv3img2.png', alt: 'div4img' },
+  { id: 3, src: './homePageDiv3img3.png', alt: 'div4img' },
+  { id: 4, src: './homePageDiv3img4.png', alt: 'div4img' },
+  { id: 5, src: './homePageDiv3img5.png', alt: 'div4img' },
+  { id: 6, src: './homePageDiv3img6.png', alt: 'div4img' },
+  { id: 7, src: './homePageDiv3img7.png', alt: 'div4img' },
+  { id: 8, src: './homePageDiv3img8.png', alt: 'div4img' },
+  { id: 9, src: './homePageDiv3img9.png', alt: 'div4img' },
+  { id: 10, src: './homePageDiv3img10.png', alt: 'div4img' },
+  { id: 11, src: './homePageDiv3img11.png', alt: 'div4img' },
+  { id: 12, src: './homePageDiv3img12.png', alt: 'div4img' },
+  { id: 13, src: './homePageDiv3img13.png', alt: 'div4img' },
 ];
 
 const div4Images = [
@@ -354,7 +354,7 @@ export default function Home() {
       {/* Content */}
       <div className={` w-full flex ${mobileView?"flex-col h-[60vh]":"h-1/2"} items-center justify-center gap-7 home-page-bg-div2`}>
         <motion.div className={`relative ${mobileView?"w-full h-[55vh] mt-4":"w-1/3 h-full"} `}>
-          <Image src="/homepageDiv2lodge1.png" alt="hpd2l1" fill sizes="100vw" className="object-contain object-center" />
+          <Image src="./homepageDiv2lodge1.png" alt="hpd2l1" fill sizes="100vw" className="object-contain object-center" />
           <motion.div className="absolute inset-0 flex items-center justify-center">
             <motion.div className={`relative z-10 text-white px-10 w-full h-2/3 flex flex-col justify-between items-start text-left`}>
               <motion.div 
@@ -371,7 +371,7 @@ export default function Home() {
           </motion.div>
         </motion.div>
         <motion.div className={`relative ${mobileView?"w-full h-[55vh] mb-4":"w-1/3 h-full"} `}>
-            <Image src="/homepageDiv2lodge2.png" alt={`hpd2l1`} fill sizes="100vw" className="object-contain"/>
+            <Image src="./homepageDiv2lodge2.png" alt={`hpd2l1`} fill sizes="100vw" className="object-contain"/>
             <motion.div className="absolute inset-0 flex items-center justify-center">
               <motion.div className={`relative z-10 text-white px-10 w-full h-2/3 flex flex-col justify-between items-end text-right ${mont.className}`}>
                 <motion.div 
@@ -663,10 +663,10 @@ export default function Home() {
         {/* 2x2 Grid */}
         <div className={` w-full px-10 ${mobileView ? 'flex flex-col gap-4 h-[120vh]' : 'grid grid-cols-1 md:grid-cols-2 gap-4 h-[75vh]'} ${mont.className}`}>
           {[
-            { src: "/homePageDiv5img1.png", title: "Living", description: "The hotels in Blackbuck National Park in Velavadar stand amidst a beautiful hamlet. The lodges offer accommodation in boutique cottages with en-suite modern and elegant bathrooms. Each cottage has all contemporary facilities while preserving regional and cultural architecture." },
-            { src: "/homePageDiv5img2.png", title: "Dining", description: "The multi-cuisine restaurant at Velavadar lodges offers magnificent views of the grasslands. These resorts serve exceptional seasonal and regional dishes, blending traditional flavors with modern flair." },
-            { src: "/homePageDiv5img3.png", title: "Facilities", description: "The Blackbuck National Park hotels are set in a picturesque landscape with water bodies and golden grasslands. Each cottage features a private outdoor sitting space and is equipped with modern comforts while maintaining traditional architecture." },
-            { src: "/homePageDiv5img4.png", title: "Team", description: "We, at Safaris India Tours, are a dedicated team passionate about wildlife and nature. Our goal is to provide guests with a memorable and comfortable stay." },
+            { src: "./homePageDiv5img1.png", title: "Living", description: "The hotels in Blackbuck National Park in Velavadar stand amidst a beautiful hamlet. The lodges offer accommodation in boutique cottages with en-suite modern and elegant bathrooms. Each cottage has all contemporary facilities while preserving regional and cultural architecture." },
+            { src: "./homePageDiv5img2.png", title: "Dining", description: "The multi-cuisine restaurant at Velavadar lodges offers magnificent views of the grasslands. These resorts serve exceptional seasonal and regional dishes, blending traditional flavors with modern flair." },
+            { src: "./homePageDiv5img3.png", title: "Facilities", description: "The Blackbuck National Park hotels are set in a picturesque landscape with water bodies and golden grasslands. Each cottage features a private outdoor sitting space and is equipped with modern comforts while maintaining traditional architecture." },
+            { src: "./homePageDiv5img4.png", title: "Team", description: "We, at Safaris India Tours, are a dedicated team passionate about wildlife and nature. Our goal is to provide guests with a memorable and comfortable stay." },
           ].map((item, index) => (
             <motion.div
               key={index}
