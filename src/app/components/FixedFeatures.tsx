@@ -20,7 +20,7 @@ export default function FixedFeatures(){
             }}
             >
             <Image
-                src={whatsappTrue ? "../closeIcon.png" : "../whatsappIcon.png"}
+                src={whatsappTrue ? "/closeIcon.png" : "/whatsappIcon.png"}
                 alt=''
                 fill
                 className="object-contain"
@@ -30,7 +30,7 @@ export default function FixedFeatures(){
             <Link href="tel:+91-8860680660" passHref>
             <div className="fixed bottom-[138px] right-[14px] h-[50px] w-[50px] rounded-full z-[9999] cursor-pointer transition-all duration-300 ease-in-out bg-transparent p-2">
                 <Image
-                src="../callUsIcon.png"
+                src="/callUsIcon.png"
                 alt=""
                 fill
                 className="object-contain"
@@ -56,7 +56,7 @@ export default function FixedFeatures(){
                     className="fixed bottom-[27px] right-[107px] h-[269px] w-[347px] text-white text-3xl z-[999] flex items-center justify-center"
                 >
                     <Image
-                    src="../whatsappContent.png"
+                    src="/whatsappContent.png"
                     alt=""
                     fill
                     className="object-contain"

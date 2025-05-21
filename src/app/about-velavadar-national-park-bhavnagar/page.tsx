@@ -12,15 +12,15 @@ import { Montserrat, Montserrat_Alternates, Montserrat_Subrayada, Montserrat_Und
 const mont = Montserrat({weight: ['400', '700', '900'], style: ['normal', 'italic'], subsets: ['latin', 'latin-ext'], display: 'swap', variable: '--font-p', adjustFontFallback: true })
 
 const abtDiv2galleryImages = [
-  { id: 1, src: '../safari-velavadar-national-park-2.jpg', alt: 'Safari in Velavadar Blackbuck National Park' },
-  { id: 2, src: '../safari-velavadar-national-park-3.jpg', alt: 'Safari in Velavadar Blackbuck National Park' },
-  { id: 3, src: '../hotels-resorts-velavadar.jpg', alt: 'Hotels and Resorts in Blackbuck National Park' },
-  { id: 4, src: '../velavadar-national-park-8.jpg', alt: 'Hotels and Resorts in Blackbuck Velavadar National Park' },
-  { id: 5, src: '../safari-velavadar-national-park-6.jpg', alt: 'Velavadar National Park' },
-  { id: 6, src: '../velavadar-national-park-10.jpg', alt: 'Velavadar National Park' },
-  { id: 7, src: '../safari-velavadar-national-park-8.jpg', alt: 'Safari in Velavadar Blackbuck National Park' },
-  { id: 8, src: '../safari-velavadar-national-park-9.jpg', alt: 'Velavadar National Park' },
-  { id: 9, src: '../safari-velavadar-national-park-10.jpg', alt: 'Velavadar National Park' },
+  { id: 1, src: '/safari-velavadar-national-park-2.jpg', alt: 'Safari in Velavadar Blackbuck National Park' },
+  { id: 2, src: '/safari-velavadar-national-park-3.jpg', alt: 'Safari in Velavadar Blackbuck National Park' },
+  { id: 3, src: '/hotels-resorts-velavadar.jpg', alt: 'Hotels and Resorts in Blackbuck National Park' },
+  { id: 4, src: '/velavadar-national-park-8.jpg', alt: 'Hotels and Resorts in Blackbuck Velavadar National Park' },
+  { id: 5, src: '/safari-velavadar-national-park-6.jpg', alt: 'Velavadar National Park' },
+  { id: 6, src: '/velavadar-national-park-10.jpg', alt: 'Velavadar National Park' },
+  { id: 7, src: '/safari-velavadar-national-park-8.jpg', alt: 'Safari in Velavadar Blackbuck National Park' },
+  { id: 8, src: '/safari-velavadar-national-park-9.jpg', alt: 'Velavadar National Park' },
+  { id: 9, src: '/safari-velavadar-national-park-10.jpg', alt: 'Velavadar National Park' },
 ];
 
 export default function Home() {
@@ -96,7 +96,7 @@ export default function Home() {
           transition={{ ease: "easeOut", duration: 0.2 }}
         >
           <Image
-            src="../safari-velavadar-national-park-10.jpg"
+            src="/safari-velavadar-national-park-10.jpg"
             alt="Velavadar National Park"
             fill
             className="object-cover"
@@ -137,7 +137,7 @@ export default function Home() {
         {mobileView ? (
           <div className="h-[500px] w-full relative flex items-center justify-center px-4 py-6 text-center">
             <Image
-              src="../safari-velavadar-national-park-11.jpg"
+              src="/safari-velavadar-national-park-11.jpg"
               alt="Velavadar National Park"
               fill
               sizes="100vw"
@@ -161,7 +161,7 @@ export default function Home() {
             <div className="h-full w-1/3 flex items-center justify-center">
               <motion.div className="relative w-2/3 h-4/5 p-4">
                 <Image
-                  src="../safari-velavadar-national-park-11.jpg"
+                  src="/safari-velavadar-national-park-11.jpg"
                   alt="Velavadar National Park"
                   fill
                   sizes="100vw"
@@ -176,7 +176,7 @@ export default function Home() {
          {mobileView ? (
           <div className="h-[500px] w-full relative flex items-center justify-center px-4 py-6 text-center my-2">
             <Image
-              src="../reaching-velavadar-map.jpg"
+              src="/reaching-velavadar-map.jpg"
               alt="Map - How to reach Velavadar Blackbuck National Park, Velavadar Map"
               fill
               sizes="100vw"
@@ -196,7 +196,7 @@ export default function Home() {
             <div className="h-full w-1/3 flex items-center justify-center">
               <motion.div className="relative w-2/3 h-4/5 p-4">
                 <Image
-                  src="../reaching-velavadar-map.jpg"
+                  src="/reaching-velavadar-map.jpg"
                   alt="Map - How to reach Velavadar Blackbuck National Park, Velavadar Map"
                   fill
                   sizes="100vw"
@@ -210,7 +210,7 @@ export default function Home() {
         {mobileView ? (
           <div className="h-[500px] w-full relative flex items-center justify-center px-4 py-6 text-center">
             <Image
-              src="../velavadar-national-park-3.jpg"
+              src="/velavadar-national-park-3.jpg"
               alt="Safari in Velavadar Blackbuck National Park"
               fill
               sizes="100vw"
@@ -234,7 +234,7 @@ export default function Home() {
             <div className="h-full w-1/3 flex items-center justify-center">
               <motion.div className="relative w-2/3 h-4/5 p-4">
                 <Image
-                  src="../velavadar-national-park-3.jpg"
+                  src="/velavadar-national-park-3.jpg"
                   alt="Safari in Velavadar Blackbuck National Park"
                   fill
                   sizes="100vw"
@@ -248,7 +248,7 @@ export default function Home() {
         {mobileView ? (
           <div className="h-[500px] w-full relative flex items-center justify-center px-4 py-6 text-center my-2">
             <Image
-              src="../velavadar-national-park-2.jpg"
+              src="/velavadar-national-park-2.jpg"
               alt="Safari in Velavadar Blackbuck National Park"
               fill
               sizes="100vw"
@@ -272,7 +272,7 @@ export default function Home() {
             <div className="h-full w-1/3 flex items-center justify-center">
               <motion.div className="relative w-2/3 h-4/5 p-4">
                 <Image
-                  src="../velavadar-national-park-2.jpg"
+                  src="/velavadar-national-park-2.jpg"
                   alt="Safari in Velavadar Blackbuck National Park"
                   fill
                   sizes="100vw"
@@ -286,7 +286,7 @@ export default function Home() {
         {mobileView ? (
           <div className="h-[500px] w-full relative flex items-center justify-center px-4 py-6 text-center">
             <Image
-              src="../safari-velavadar-national-park-1.jpg"
+              src="/safari-velavadar-national-park-1.jpg"
               alt="Accommodation in Velavadar National Park"
               fill
               sizes="100vw"
@@ -310,7 +310,7 @@ export default function Home() {
             <div className="h-full w-1/3 flex items-center justify-center">
               <motion.div className="relative w-2/3 h-4/5 p-4">
                 <Image
-                  src="../safari-velavadar-national-park-1.jpg"
+                  src="/safari-velavadar-national-park-1.jpg"
                   alt="Accommodation in Velavadar National Park"
                   fill
                   sizes="100vw"
