@@ -11,7 +11,7 @@ export default function ByRoad(){
         return () => window.removeEventListener("resize", checkMobile);
       }, []);
     return (
-        <div className={`min-h-[40vh] w-full flex flex-col items-start justify-center text-earth-dark-soil gap-3 ${mont.className}`}>
+        <div className={`min-h-[400px] w-full flex flex-col items-start justify-center text-earth-brown gap-3 ${mont.className}`}>
             <span className={`${mobileView?"text-sm":"text-lg"}`}>Velavadar is a beautiful travel destination that is rooted in the heart of Central India.</span>
             <span className={`${mobileView?"text-xs":"text-sm"}`}>
                 It is situated at almost 54 km from the district headquarters of Bhavnagar, Gujarat<br/>

@@ -23,7 +23,8 @@ export default function Lpimg1(){
                 className={`relative border-white ${mobileView ? "px-2 py-1 my-1 text-[10px] border-1" : "px-4 py-2 my-3 text-base border-2"} font-light rounded-full cursor-pointer ${mont.className}`}
                 initial={{
                     backgroundColor: 'rgba(0, 0, 0, 0)',
-                    backdropFilter: 'blur(0px)'
+                    backdropFilter: 'blur(0px)',
+                    color: 'white'
                 }}
                 whileHover={{
                     backgroundColor: 'rgba(255, 255, 255, 1)',
@@ -31,23 +32,21 @@ export default function Lpimg1(){
                     scale: 1.1,
                     transition: { duration: 0.3 },
                     opacity: 0.77,
-                    color: 'black'
+                    color: 'black',
                 }}
                 whileTap={{
                     scale: 0.95,
                     opacity: 0.54
                 }}
-                >
+            >
                 <motion.span 
-                    className="relative z-10 text-white"
-                    whileHover={{
-                        color: 'black',
-                        transition: { duration: 0.3 }
-                    }}
+                    className="relative z-10"
+                    whileHover={{transition: { duration: 0.3 } }}
                 >
                     Read More
                 </motion.span>
             </motion.button>
+
         </div>
     );
 }

@@ -4,38 +4,37 @@ import { motion, AnimatePresence, useScroll } from 'framer-motion';
 import Image from "next/image";
 import { useInView } from 'react-intersection-observer';
 import Header from './components/Header';
-import Maps from './components/Maps';
 import Link from 'next/link';
 
 import { Montserrat, Montserrat_Alternates, Montserrat_Subrayada, Montserrat_Underline } from 'next/font/google'
 const mont = Montserrat({weight: ['400', '700', '900'], style: ['normal', 'italic'], subsets: ['latin', 'latin-ext'], display: 'swap', variable: '--font-p', adjustFontFallback: true })
 
 const div0Imgs = [
-  { src: "./bslDiv0img1.png"},
-  { src: "./bslDiv0img2.png"},
-  { src: "./bslDiv0img3.png"},
-  { src: "./bslDiv0img4.png"},
+  { src: "../hotels-near-velavadar-1.jpg", alt: ''},
+  { src: "../Wildlife-at-Blackbuck-National-Park-Velavadar0.jpg", alt: ''},
+  { src: "../1.-Blackbuck-Safari-Lodge.jpg", alt: ''},
+  { src: "../2.-Rooms-at-lackbuck-Safari-Lodge.jpg", alt: ''},
 ];
 
 const div4imgs = [
-  {src: "./blvDiv4img2.png", desc: "Wildlife Safari"},
-  {src: "./blvDiv4img3.png", desc: "Hot and Cold Water Supply"},
-  {src: "./blvDiv4img4.png", desc: "Multi Cuisine Restaurant"},
-  {src: "./blvDiv4img5.png", desc: "Organic Toiletries"},
-  {src: "./blvDiv4img6.png", desc: "Room Air Conditioning"},
-  {src: "./blvDiv4img7.png", desc: "Car Parking"},
-  {src: "./blvDiv4img8.png", desc: "Tea Coffee Maker"},
-  {src: "./blvDiv4img9.png", desc: "Security Emphasized"},
-  {src: "./blvDiv4img10.png", desc: "WiFi"},
-  {src: "./blvDiv4img1.png", desc: "COVID-19 Preparedness"},
+  {src: "../jungle-safari.png", alt: '', desc: "Wildlife Safari"},
+  {src: "../24x7-Hot-and-Cold-Water-Supply.png", alt: '', desc: "Hot and Cold Water Supply"},
+  {src: "../Restaurant.png", alt: '', desc: "Multi Cuisine Restaurant"},
+  {src: "../Organic-Toiletries.png", alt: '', desc: "Organic Toiletries"},
+  {src: "../Room-Heating.png", alt: '', desc: "Room Air Conditioning"},
+  {src: "../Car-Parking.png", alt: '', desc: "Car Parking"},
+  {src: "../Complimentary-Tea-Coffee-Maker.png", alt: '', desc: "Tea Coffee Maker"},
+  {src: "../CCTV-Enabled.png", alt: '', desc: "Security Emphasized"},
+  {src: "../Wifi.png", alt: '', desc: "WiFi"},
+  {src: "../COVID-19-Preparedness.png", alt: '', desc: "COVID-19 Preparedness"},
 ]
 
 const div5GalleryImages = [
-  { id: 1, src: './bsldiv5img1.png', alt: 'bsldiv5img1' },
-  { id: 2, src: './bsldiv5img2.png', alt: 'bsldiv5img2' },
-  { id: 3, src: './bsldiv5img3.png', alt: 'bsldiv5img3' },
-  { id: 4, src: './bsldiv5img4.png', alt: 'bsldiv5img4' },
-  { id: 5, src: './bsldiv5img5.png', alt: 'bsldiv5img5' },
+  { id: 1, src: '../blackbuck-safari-lodge-2.jpg', alt: '' },
+  { id: 2, src: '../blackbuck-safari-lodge.jpg', alt: '' },
+  { id: 3, src: '../hotels-near-velavadar-1.jpg', alt: '' },
+  { id: 4, src: '../resort-in-blackbuck-national-park.jpg', alt: '' },
+  { id: 5, src: '../1.-Blackbuck-Safari-Lodge.jpg', alt: '' },
 ]
 
 const faqs = [
@@ -118,8 +117,8 @@ export default function Home() {
   return (
     <>
       <Header div0View={div0InView}/>
-      <div ref={div0Ref} className={`${mobileView?"h-[80vh]":"h-[100vh]"} w-screen flex flex-col items-center justify-center`}>
-        <div ref={div0Ref} className={`relative ${mobileView?"h-[65vh]":"h-[85vh]"} w-screen overflow-hidden`}>
+      <div ref={div0Ref} className={`${mobileView?"h-[800px]":"h-[100vh]"} w-screen flex flex-col items-center justify-center`}>
+        <div ref={div0Ref} className={`relative ${mobileView?"h-[650px]":"h-[calc(100vh*7/8)]"} w-screen overflow-hidden`}>
           {/* Image slider container */}
           <motion.div
             className="flex h-full w-full"
@@ -146,7 +145,7 @@ export default function Home() {
                 >
                   <Image
                     src={image.src}
-                    alt={`Image ${index + 1}`}
+                    alt={image.alt}
                     fill
                     sizes="100vw"
                     className="object-cover"
@@ -169,26 +168,41 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className={`h-[15vh] w-screen flex flex-col items-center justify-center gap-2 ${mont.className} backdrop-blur-md transition-colors duration-500 text-black`}>
-          <h1 className={`${mobileView?"text-base":"text-xl"} text-earth-dark-soil font-bold`}>Blackbuck Safari Lodge</h1>
-          <h2 className={`tracking-wide ${mobileView?"text-xs":"text-lg"} font-bold text-earth-grey`}>A Boutique Resort in&nbsp;<span className='text-earth-brown'>Velavadar -&nbsp;</span><span className='text-earth-dark-green'>Blackbuck National Park </span></h2>
+        <div className={`h-[150px] w-screen flex flex-col items-center justify-center gap-2 ${mont.className} backdrop-blur-md transition-colors duration-500 text-black`}>
+          <h1 className={`${mobileView?"text-base":"text-xl"} text-earth-brown font-bold`}>Blackbuck Safari Lodge</h1>
+          <h2 className={`tracking-wide ${mobileView?"text-xs":"text-lg"} text-earth-brown`}>A Boutique Resort in Velavadar - Blackbuck National Park</h2>
         </div>
       </div>
 
-      <div ref={div1Ref} className={`${mobileView ? "h-[154vh]" : "h-[70vh]"} w-full flex items-center justify-center gap-2 ${mont.className}`}>
+      <div
+        ref={div1Ref}
+        className={`${mobileView ? "h-[154vh]" : "h-[600px]"} w-full flex items-center justify-center gap-2 ${mont.className}`}
+      >
         <div className={`h-full w-3/4 flex ${mobileView ? "flex-col" : ""} items-start justify-start gap-3 p-4`}>
+          {/* Left Text Section */}
           <div className={`h-full ${mobileView ? "w-full" : "w-2/3"} flex flex-col items-start justify-center text-left gap-2`}>
-            <span className={`text-earth-brown ${mobileView ? "text-base" : "text-2xl"} font-semibold`}>About Resorts and Hotels in Blackbuck National Park</span>
-            <span className={`text-earth-brown ${mobileView ? "text-sm" : "text-xl"} font-bold my-2`}>Best Rated Luxury Resorts and Hotels in Velavadar National Park</span>
-            <span className={`text-earth-dark-soil ${mobileView ? "text-xs" : "text-base"} font-normal`}>
-              Rated among the best hotels in Blackbuck National Park Velavadar near Bhavnagar, Gujarat, is the Blackbuck Safari Lodge. A quaint luxury safari resort in velavadar national park famous for Blackbucks. This resort with rustic and surreal surroundings is set in the midst of a natural hamlet, furthermore surrounded by farmlands and water reserves. Also, the lodge promises a unique experience to all guests.<br></br>
-              This safari resort in velavadar blackbuck national park is spread over an area of 4 acres. Along with offering guests, that choose to visit Velvadavar a chance to do a blackbuck safari, it also provides exposure to the Flora & Fauna of Blackbuck National Park near Bhavnagar.<br></br>
-              This National Park in Gujarat is famous for herds of blackbuck, Indian wolves, and also several rare birds – some migratory and some resident. Furthermore, you can experience a special closeness to nature when you are inside the property premises or at room sit-outs, which makes for an unforgettable experience.
+            <span className={`text-earth-brown ${mobileView ? "text-base" : "text-2xl"} font-semibold`}>
+              About Resorts and Hotels in Blackbuck National Park
             </span>
-            <span className={`text-earth-brown ${mobileView ? "text-base" : "text-xl"} font-bold my-2`}>Accommodation at the Resort</span>
-            <span className={`text-earth-dark-soil ${mobileView ? "text-sm" : "text-base"} font-normal`}>18 Cottages with Air Conditioning</span>
+            <span className={`text-earth-brown ${mobileView ? "text-sm" : "text-xl"} font-bold my-2`}>
+              Best Rated Luxury Resorts and Hotels in Velavadar National Park
+            </span>
+            <span className={`text-earth-brown ${mobileView ? "text-xs" : "text-base"} font-normal`}>
+              Rated among the best hotels in Blackbuck National Park Velavadar near Bhavnagar, Gujarat, is the Blackbuck Safari Lodge. A quaint luxury safari resort in Velavadar National Park famous for Blackbucks. This resort with rustic and surreal surroundings is set in the midst of a natural hamlet, surrounded by farmlands and water reserves. The lodge promises a unique experience to all guests.<br />
+              This safari resort in Velavadar is spread over 4 acres and offers guests a chance to do a blackbuck safari while exposing them to the flora and fauna of the park.<br />
+              This National Park in Gujarat is famous for herds of blackbuck, Indian wolves, and several rare birds. The experience at this resort makes for an unforgettable stay.
+            </span>
+
+            <span className={`text-earth-brown ${mobileView ? "text-base" : "text-xl"} font-bold my-2`}>
+              Accommodation at the Resort
+            </span>
+            <span className={`text-earth-brown ${mobileView ? "text-sm" : "text-base"} font-normal`}>
+              18 Cottages with Air Conditioning
+            </span>
+
+            {/* Call Button */}
             <motion.button
-              className={`relative border-2 border-earth-dark-soil px-3 py-2 my-3 ${mobileView ? "w-full text-xs" : "w-2/3 text-sm"} rounded-full font-light cursor-pointer`}
+              className={`relative border-2 border-earth-brown px-3 py-2 my-3 ${mobileView ? "w-full text-xs" : "w-2/3 text-sm"} rounded-full font-light cursor-pointer`}
               initial={{ backgroundColor: "rgba(0, 0, 0, 0)", backdropFilter: "blur(0px)" }}
               whileHover={{
                 backgroundColor: "rgba(255, 255, 255, 1)",
@@ -200,33 +214,41 @@ export default function Home() {
               }}
               whileTap={{ scale: 0.95, opacity: 0.54 }}
             >
-              <motion.span 
-                className="relative z-10 text-earth-dark-soil pl-6"
-                style={{ backgroundImage: "./callIconEarthDarkSoil.png", backgroundRepeat: "no-repeat", backgroundSize: "contain" }}
-              >
-                <Link href="tel:8860680660" passHref>Call Now to Book +91-8860680660</Link>
+              <motion.span className="relative z-10 text-earth-brown flex items-center justify-center gap-2">
+                <Image
+                  src="../callIconEarthBrown.png"
+                  alt="Call Icon"
+                  width={24}
+                  height={24}
+                  className="object-contain"
+                />
+                <Link href="tel:8860680660" passHref>
+                  Call Now to Book +91-8860680660
+                </Link>
               </motion.span>
             </motion.button>
           </div>
 
+          {/* Right Image + Text */}
           <div className={`h-full ${mobileView ? "w-full" : "w-1/3"} flex flex-col items-center justify-center`}>
             <div className="h-1/2 w-full flex flex-col items-center justify-center">
-              <motion.div className="relative w-3/4 h-3/4 p-4 flex flex-col items-center justify-center">
+              <motion.div className="relative w-full h-full flex flex-col items-center justify-center">
                 <Image
-                  src="./bslDiv1img1.png"
-                  alt={`bslDiv1img1`}
+                  src="../hotels-near-velavadar-1.jpg"
+                  alt=""
                   fill
                   sizes="100vw"
                   className="object-contain object-bottom"
                 />
               </motion.div>
             </div>
+
             <div className={`h-1/2 w-full flex flex-col items-center justify-start px-7`}>
-              <span className={`text-earth-brown ${mobileView ? "text-sm" : "text-xl"} font-semibold my-2 italic`}>
-                Which is the best place to stay in velavadar near Bhavnagar among hotels and resorts in Blackbuck National Park?
+              <span className={`text-earth-brown ${mobileView ? "text-sm" : "text-base"} font-semibold my-2 italic`}>
+                Which is the best place to stay in Velavadar near Bhavnagar among hotels and resorts in Blackbuck National Park?
               </span>
-              <span className={`text-earth-dark-soil ${mobileView ? "text-xs" : "text-base"} font-normal italic`}>
-                Blackbuck National Park has two options to stay. Our recommendation is Blackbuck Safari lodge, a hotel in Velavadar National Park near Bhavnagar.
+              <span className={`text-earth-brown ${mobileView ? "text-xs" : "text-sm"} font-normal italic`}>
+                Blackbuck National Park has two options to stay. Our recommendation is Blackbuck Safari Lodge, a hotel in Velavadar National Park near Bhavnagar.
               </span>
             </div>
           </div>
@@ -234,10 +256,11 @@ export default function Home() {
       </div>
 
 
-      <div ref={div2Ref} className={`${mobileView ? "h-[127vh] py-4" : "h-[70vh]"} w-full flex items-center justify-center gap-2 bsl-bg-div2 ${mont.className}`}>
+
+      <div ref={div2Ref} className={`${mobileView ? "h-[1200px] py-4" : "h-[700px]"} w-full flex flex-col items-center justify-center gap-2 bsl-bg-div2 ${mont.className}`}>
         <motion.div
           ref={div2Ref}
-          className={`h-full w-2/3 flex ${mobileView ? "flex-col" : ""} items-center justify-center gap-4`}
+          className={`h-[600px] w-2/3 flex ${mobileView ? "flex-col" : ""} items-center justify-center gap-4`}
           initial={{ opacity: 0, y: 50 }}
           animate={(div2InView || div3InView) ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -254,35 +277,6 @@ export default function Home() {
               In addition, Velavadar National Park boasts of the highest number of visiting raptors during the winters. Conversely, the safari lodge is also the first choice among hotels in Blackbuck National Park for guests wanting to relax and spend a weekend at a picturesque wildlife lodge surrounded by beautiful grasslands.<br />
               Moreover, Blackbuck National Park – Velavadar also acts as a home for lesser floricans during their monsoon breeding.
             </span>
-            <div className='h-auto w-full flex items-center justify-center gap-10 flex-wrap'>
-              {[
-                { href: "tel:+91-8860279222", label: "Call Now" },
-                { href: "/about-velavadar-national-park-bhavnagar", label: "About Us" },
-                { href: "/contact-us", label: "Responsible Tourism" }
-              ].map((btn, i) => (
-                <motion.button
-                  key={i}
-                  className={`relative border-2 border-white rounded-full ${mobileView ? "text-xs px-2 py-2" : "text-sm px-3 py-2 my-3"} font-light cursor-pointer ${mont.className}`}
-                  initial={{ backgroundColor: 'rgba(0, 0, 0, 0)', backdropFilter: 'blur(0px)' }}
-                  whileHover={{
-                    backgroundColor: 'rgba(255, 255, 255, 1)',
-                    backdropFilter: 'blur(7px)',
-                    scale: 1.1,
-                    transition: { duration: 0.3 },
-                    opacity: 0.77,
-                    color: 'black'
-                  }}
-                  whileTap={{ scale: 0.95, opacity: 0.54 }}
-                >
-                  <motion.span
-                    className="relative z-10 text-white"
-                    whileHover={{ color: 'white', transition: { duration: 0.3 } }}
-                  >
-                    <Link href={btn.href} passHref>{btn.label}</Link>
-                  </motion.span>
-                </motion.button>
-              ))}
-            </div>
           </div>
           <div className={`h-full ${mobileView ? "w-full" : "w-1/2"} flex flex-col items-center justify-center gap-2`}>
             <span className={`text-white ${mobileView ? "text-base" : "text-xl"} font-bold`}>
@@ -290,45 +284,67 @@ export default function Home() {
             </span>
             <motion.div className={`relative w-4/5 ${mobileView?"h-[20vh]":"h-2/3"} p-4 flex flex-col items-center justify-center`}>
               <Image
-                src="./bslDiv2img.png"
+                src="../resort-in-blackbuck-national-park.jpg"
                 alt="bslDiv2img"
                 fill
                 sizes="100vw"
                 className="object-cover object-center"
               />
             </motion.div>
-            <motion.button
-              className={`relative border-2 border-white my-3 rounded-full ${mobileView ? "text-xs px-2 py-2" : "text-sm px-3 py-2"} font-light cursor-pointer ${mont.className}`}
-              initial={{ backgroundColor: 'rgba(0, 0, 0, 0)', backdropFilter: 'blur(0px)' }}
-              whileHover={{
-                backgroundColor: 'rgba(255, 255, 255, 1)',
-                backdropFilter: 'blur(7px)',
-                scale: 1.1,
-                transition: { duration: 0.3 },
-                opacity: 0.77,
-                color: 'black'
-              }}
-              whileTap={{ scale: 0.95, opacity: 0.54 }}
-            >
-              <motion.span
-                className="relative z-10 text-white"
-                whileHover={{ color: 'white', transition: { duration: 0.3 } }}
-              >
-                <Link href="/contact-us" passHref>Contact Us</Link>
-              </motion.span>
-            </motion.button>
           </div>
         </motion.div>
+        <motion.div
+          ref={div2Ref}
+          className={`w-full flex ${mobileView?'flex-col h-[400px]':'h-[100px]'} items-center justify-center gap-10`}
+          initial={{ opacity: 0, y: 50 }}
+          animate={(div2InView || div3InView) ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+              {[
+                { href: "tel:+91-8860279222", label: "Call Now" },
+                { href: "/about-velavadar-national-park-bhavnagar", label: "About Us" },
+                { href: "/contact-us", label: "Responsible Tourism" },
+                { href: "/contact-us", label: "Contact Us" },
+              ].map((btn, i) => (
+                <motion.button
+                key={i}
+                className={`relative h-auto w-auto border-2 border-white rounded-full ${mobileView ? "text-xs px-2 py-2" : "text-sm px-3 py-2 my-3"} font-light cursor-pointer ${mont.className}`}
+                initial={{
+                    backgroundColor: 'rgba(0, 0, 0, 0)',
+                    backdropFilter: 'blur(0px)',
+                    color: 'white'
+                }}
+                whileHover={{
+                    backgroundColor: 'rgba(255, 255, 255, 1)',
+                    backdropFilter: 'blur(7px)',
+                    scale: 1.1,
+                    transition: { duration: 0.3 },
+                    opacity: 0.77,
+                    color: 'black',
+                }}
+                whileTap={{
+                    scale: 0.95,
+                    opacity: 0.54
+                }}
+            >
+                <motion.span 
+                    className="relative z-10"
+                    whileHover={{transition: { duration: 0.3 } }}
+                >
+                  <Link href={btn.href} passHref>{btn.label}</Link>
+                </motion.span>
+            </motion.button>
+              ))}
+          </motion.div>
       </div>
 
 
 
-      <div ref={div4Ref} className={`${mobileView ? "h-auto" : "h-[35vh]"} w-full flex flex-col items-center justify-center bg-intm-grey gap-2 ${mont.className}`}>
-        <div className='h-[2vh] w-full'></div>
-        <div className={`h-[10vh] w-2/3 flex items-center justify-center ${mobileView ? "text-base" : "text-3xl"} font-semibold text-earth-brown`}>
+      <div ref={div4Ref} className={`${mobileView ? "h-auto" : "h-[300px]"} w-full flex flex-col items-center justify-center bg-intm-grey gap-2 ${mont.className}`}>
+        <div className={`h-[100px] w-2/3 flex items-center justify-center ${mobileView ? "text-base" : "text-2xl"} font-semibold text-earth-brown`}>
           Facilities at the Hotel
         </div>
-        <div className={`w-2/3 flex ${mobileView ? "flex-col h-[100vh]" : "h-[20vh]"} items-center justify-center`}>
+        <div className={`w-2/3 flex ${mobileView ? "flex-col h-[1000px]" : "h-[200px]"} items-center justify-center`}>
           {div4imgs.map((item, index) => (
             <div key={index} className={`h-full ${mobileView ? "w-full" : "w-1/10"} flex flex-col items-center justify-cente`}>
               <motion.div
@@ -339,7 +355,7 @@ export default function Home() {
               >
                 <Image
                   src={item.src}
-                  alt={`blvDiv4img${index + 1}`}
+                  alt={item.alt}
                   fill
                   sizes="100vw"
                   className="object-contain object-center"
@@ -361,9 +377,8 @@ export default function Home() {
 
 
 
-      <div ref={div5Ref} className={`${mobileView ? "h-[200vh]" : "h-[90vh]"} w-screen relative z-10 flex items-center justify-center text-3xl text-black home-page-bg-div3 ${mont.className}`}>
+      <div ref={div5Ref} className={`${mobileView?"h-[1700px]":"h-[900px]"} w-screen relative z-10 flex items-center justify-center text-3xl text-black home-page-bg-div3 ${mont.className}`}>
         <div className={`h-4/5 w-4/5 bg-black/54 rounded-xl flex ${mobileView ? "flex-col" : ""} items-center justify-center`} style={{ backdropFilter: 'blur(7px)' }}>
-          
           {/* Left Side */}
           <div className={`h-full ${mobileView ? "w-full" : "w-2/3"} flex flex-col items-start justify-center p-7 gap-3`}>
             <span className={`text-white ${mobileView ? "text-base" : "text-2xl"} font-extrabold ${mont.className}`}>Things to Do at Blackbuck National Park</span>
@@ -413,24 +428,32 @@ export default function Home() {
             </div>
 
             <motion.button
-              className={`relative border-2 border-white px-3 py-2 my-3 rounded-full ${mobileView ? "text-xs" : "text-sm"} font-light cursor-pointer ${mont.className}`}
-              whileHover={{
-                backgroundColor: 'white',
-                backdropFilter: 'blur(7px)',
-                scale: 1.1,
-                transition: { duration: 0.3 },
-                opacity: 0.77,
-                color: 'black'
+              className={`relative border-2 border-white px-3 py-2 my-3 rounded-full ${mobileView?"text-xs":"text-sm"} font-light cursor-pointer ${mont.className}`}
+              initial={{
+                  backgroundColor: 'rgba(0, 0, 0, 0)',
+                  backdropFilter: 'blur(0px)',
+                  color: 'white'
               }}
-              whileTap={{ scale: 0.95, opacity: 0.54 }}
-            >
-              <motion.span
-                className="relative z-10 text-white"
-                whileHover={{ color: 'black', transition: { duration: 0.3 } }}
+              whileHover={{
+                  backgroundColor: 'rgba(255, 255, 255, 1)',
+                  backdropFilter: 'blur(7px)',
+                  scale: 1.1,
+                  transition: { duration: 0.3 },
+                  opacity: 0.77,
+                  color: 'black',
+              }}
+              whileTap={{
+                  scale: 0.95,
+                  opacity: 0.54
+              }}
+          >
+              <motion.span 
+                  className="relative z-10"
+                  whileHover={{transition: { duration: 0.3 } }}
               >
-                <Link href="/contact-us" passHref>Responsible Tourism</Link>
+                  <Link href="/contact-us" passHref>Responsible Tourism</Link>
               </motion.span>
-            </motion.button>
+          </motion.button>
           </div>
 
           {/* Right Side - Form */}
@@ -475,17 +498,16 @@ export default function Home() {
 
 
 
-      <div ref={div6Ref} className={`${mobileView ? "h-[55vh]" : "h-[35vh]"} w-full flex flex-col items-center justify-center gap-2 ${mont.className}`}>
-        <div className='h-[2vh] w-full'></div>
-        <div className={`h-[10vh] w-2/3 flex items-center justify-center ${mobileView ? "text-lg" : "text-3xl"} font-semibold text-earth-brown`}>
+      <div ref={div6Ref} className={`${mobileView?"h-[500px]":"h-[300px]"}  w-full flex flex-col items-center justify-center gap-2 ${mont.className}`}>
+        <div className={`h-[100px] w-2/3 flex items-center justify-center ${mobileView ? "text-lg" : "text-2xl"} font-semibold text-earth-brown`}>
           How to Reach Velavadar
         </div>
-        <div className={`${mobileView ? "h-[40vh]" : "h-[20vh]"} w-2/3 flex ${mobileView ? "flex-col" : ""} items-center justify-center`}>
+        <div className={`${mobileView?"h-[400px]":"h-[200px]"} w-2/3 flex ${mobileView ? "flex-col" : ""} items-center justify-center`}>
           <div className={`h-full ${mobileView ? "w-full" : "w-1/3"} flex flex-col items-center justify-start`}>
             <span className={`flex items-center justify-center ${mobileView ? "text-base" : "text-xl"} font-semibold text-earth-brown`}>
               By Air
             </span>
-            <div className={`flex flex-col items-center ${mobileView ? "text-xs" : "text-base"} text-earth-faded-soil`}>
+            <div className={`flex flex-col items-center ${mobileView ? "text-xs" : "text-base"} text-earth-brown`}>
               <span className="font-semibold">Nearest Airport:</span>
               <span>Ahmedabad – 150 km</span>
               <span>Bhavnagar – 65 km</span>
@@ -495,7 +517,7 @@ export default function Home() {
             <span className={`flex items-center justify-center ${mobileView ? "text-base" : "text-xl"} font-semibold text-earth-brown`}>
               By Train
             </span>
-            <div className={`flex flex-col items-center ${mobileView ? "text-xs" : "text-base"} text-earth-faded-soil`}>
+            <div className={`flex flex-col items-center ${mobileView ? "text-xs" : "text-base"} text-earth-brown`}>
               <span className="font-semibold">Nearest Railway Station:</span>
               <span>Ahmedabad – 150 km</span>
               <span>Bhavnagar – 65 km</span>
@@ -505,7 +527,7 @@ export default function Home() {
             <span className={`flex items-center justify-center ${mobileView ? "text-base" : "text-xl"} font-semibold text-earth-brown`}>
               By Road
             </span>
-            <div className={`flex flex-col items-center ${mobileView ? "text-xs" : "text-base"} text-earth-faded-soil`}>
+            <div className={`flex flex-col items-center ${mobileView ? "text-xs" : "text-base"} text-earth-brown`}>
               <span className="font-semibold">Nearby Cities:</span>
               <span>Ahmedabad – 145 Km</span>
               <span>Anand – 142 Km</span>
@@ -519,63 +541,65 @@ export default function Home() {
 
 
 
-      <div ref={div7Ref} className={`${mobileView ? "h-[170vh]" : "h-[100vh]"} w-screen flex flex-col items-center justify-center relative ${mont.className}`}>
-        {/* Top Fade */}
-        <div className="absolute top-0 left-0 w-full h-[10vh] bg-gradient-to-b from-white/40 to-transparent"></div>
-        <div className='h-[4vh] w-full'></div>
-        <div className='h-[15vh] w-2/3 flex flex-col items-center justify-center text-3xl font-semibold text-earth-brown'>
+      <div ref={div7Ref} className={`${mobileView?"h-[1400px]":"h-[1000px]"} bg-white w-screen flex flex-col items-center justify-center relative ${mont.className}`}>
+        <div className='h-[150px] w-2/3 flex flex-col items-center justify-center text-3xl font-semibold text-earth-brown'>
           <span className={`text-earth-brown ${mobileView ? "text-lg" : "text-3xl"} font-extrabold`}>Testimonials</span>
           <span className={`text-earth-brown ${mobileView ? "text-base" : "text-2xl"} font-bold my-2`}>What do our guests say about The Blackbuck Lodge?</span>
         </div>
-        <div className={`w-2/3 flex ${mobileView ? "flex-col h-auto" : "h-[75vh]"} items-center justify-center`}>
-          <div className={`h-full ${mobileView ? "w-full" : "w-2/3"} flex flex-col items-center justify-center gap-4`}>
+        <div className={` w-2/3 flex ${mobileView?"flex-col h-auto":"h-[850px]"} items-center justify-center`}>
+          <div className={`h-full ${mobileView?"w-full":"w-2/3"} flex flex-col items-center justify-center gap-4`}>
             <div className="h-1/3 w-full flex flex-col items-center justify-center text-center gap-2">
               <span className={`text-earth-brown ${mobileView ? "text-sm" : "text-xl"} font-bold`}>Best Resort and Good Birding Spots</span>
-              <span className={`text-earth-faded-soil ${mobileView ? "text-xs" : "text-lg"}`}>Blackbuck safari lodge is the best resort in velavadar. Administrative and service staff is good. Food is excellent. Naturalist Mr Amit associated with the lodge is knowledgeable and enthusiastic. Worth visiting place.</span>
-              <span className={`text-earth-faded-soil ${mobileView ? "text-xs" : "text-lg"} font-bold`}>TripAdvisor</span>
+              <span className={`text-earth-brown ${mobileView ? "text-xs" : "text-base"}`}>Blackbuck safari lodge is the best resort in velavadar. Administrative and service staff is good. Food is excellent. Naturalist Mr Amit associated with the lodge is knowledgeable and enthusiastic. Worth visiting place.</span>
+              <span className={`text-earth-brown ${mobileView ? "text-xs" : "text-lg"} font-bold`}>TripAdvisor</span>
             </div>
             <div className="h-1/3 w-full flex flex-col items-center justify-center text-center gap-2">
               <span className={`text-earth-brown ${mobileView ? "text-sm" : "text-xl"} font-bold`}>Excellent Hotel and Nice Staff</span>
-              <span className={`text-earth-faded-soil ${mobileView ? "text-xs" : "text-lg"}`}>I spent 3 days in Velavadar in in December 2019, and it was an amazing experience. The rooms are very comfy and well-appointed with great showers, which is much appreciated after long and dusty safaris. A special mention for Amit Vegad, the resident naturalist at the property, who was very helpful and really, knowledgeable.</span>
-              <span className={`text-earth-faded-soil ${mobileView ? "text-xs" : "text-lg"} font-bold`}>TripAdvisor</span>
+              <span className={`text-earth-brown ${mobileView ? "text-xs" : "text-base"}`}>I spent 3 days in Velavadar in in December 2019, and it was an amazing experience. The rooms are very comfy and well-appointed with great showers, which is much appreciated after long and dusty safaris. A special mention for Amit Vegad, the resident naturalist at the property, who was very helpful and really, knowledgeable.</span>
+              <span className={`text-earth-brown ${mobileView ? "text-xs" : "text-lg"} font-bold`}>TripAdvisor</span>
             </div>
             <div className="h-1/3 w-full flex flex-col items-center justify-center text-center gap-2">
               <span className={`text-earth-brown ${mobileView ? "text-sm" : "text-xl"} font-bold`}>A much needed option in Velavadar</span>
-              <span className={`text-earth-faded-soil ${mobileView ? "text-xs" : "text-lg"}`}>I spent 3 days in Velavadar in in December 2019, and it was an amazing experience. The rooms are very comfy and well-appointed with great showers, which is much appreciated after long and dusty safaris. A special mention for the resident naturalist at the property, who was very helpful and really, knowledgeable.</span>
-              <span className={`text-earth-faded-soil ${mobileView ? "text-xs" : "text-lg"} font-bold`}>TripAdvisor</span>
+              <span className={`text-earth-brown ${mobileView ? "text-xs" : "text-base"}`}>I spent 3 days in Velavadar in in December 2019, and it was an amazing experience. The rooms are very comfy and well-appointed with great showers, which is much appreciated after long and dusty safaris. A special mention for the resident naturalist at the property, who was very helpful and really, knowledgeable.</span>
+              <span className={`text-earth-brown ${mobileView ? "text-xs" : "text-lg"} font-bold`}>TripAdvisor</span>
             </div>
           </div>
-          <div className={`h-full ${mobileView ? "w-full mt-10" : "w-2/3"} flex flex-col items-center justify-center`}>
-            <span className={`text-earth-brown ${mobileView ? "text-lg" : "text-2xl"} font-bold`}>In Media</span>
-            <span className={`text-earth-soil-red ${mobileView ? "text-xs" : "text-lg"} font-semibold cursor-pointer hover:text-earth-dark-soil`}>Edwina D’Souza | www.wannabemaven.com</span>
-            <span className={`text-earth-soil-red ${mobileView ? "text-xs" : "text-lg"} font-semibold cursor-pointer hover:text-earth-dark-soil`}>Anil Mulchandani | www.feamag.com</span>
+          <div className={`h-full ${mobileView?"w-full":"w-2/3"} flex flex-col items-center justify-center`}>
+            <span className={`text-earth-brown ${mobileView?"text-lg mt-10":"text-lg"} font-bold`}>In Media</span>
+            <span className={`text-earth-brown ${mobileView ? "text-xs" : "text-lg"} cursor-pointer hover:text-earth-dark-soil`}>Edwina D’Souza | www.wannabemaven.com</span>
+            <span className={`text-earth-brown ${mobileView ? "text-xs" : "text-lg"} cursor-pointer hover:text-earth-dark-soil`}>Anil Mulchandani | www.feamag.com</span>
             <span className={`text-earth-brown ${mobileView ? "text-sm" : "text-lg"} mt-10 font-bold`}>Location</span>
-            <span className={`text-earth-brown ${mobileView ? "text-xs" : "text-lg"} font-semibold`}>Hotel Blackbuck National Park Velavadar</span>
-            <div className={`${mobileView ? "w-full h-[25vh]" : "w-3/4 h-1/2"} mt-4 border-2 border-earth-brown rounded-lg`}><Maps /></div>
+            <span className={`text-earth-brown ${mobileView ? "text-xs" : "text-base"}`}>Hotel Blackbuck National Park Velavadar</span>
+            <div className={`${mobileView ? "w-full h-[25vh]" : "w-3/4 h-1/2"} mt-4 border-2 border-earth-brown text-earth-brown`}>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14793.533149418641!2d71.949527!3d22.034929!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3958cb6716f898a3%3A0xccd4167e7a60d8f0!2sBlackbuck%20Safari%20Lodge-Velavadar!5e0!3m2!1sen!2sus!4v1747820943154!5m2!1sen!2sus"
+              style={{ border: 0, width: '100%', height: '100%' }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+            </div>
           </div>
         </div>
         <div className='h-[6vh] w-full'></div>
       </div>
 
 
-      <div ref={div8Ref} className='min-h-[40vh] w-screen flex items-center justify-center relative'>
-        {/* Top Fade */}
-        <div className="absolute top-0 left-0 w-full h-[10vh] bg-gradient-to-b from-white/40 to-transparent"></div>
-
+      <div ref={div8Ref} className='min-h-[600px] py-10 w-screen flex items-center justify-center relative'>
         <div className='h-full w-2/3 flex flex-col items-start justify-start gap-7 p-4'>
-          <span className={`text-earth-dark-soil ${mobileView?"text-base":"text-3xl"} font-extrabold ${mont.className}`}>Frequently Asked Questions</span>
+          <span className={`text-earth-brown ${mobileView?"text-base":"text-2xl"} font-extrabold ${mont.className}`}>Frequently Asked Questions</span>
           <div className={`h-3/4 w-full overflow-y-auto mb-5`}>
             {faqs.map((faq, index) => (
-              <div key={index} className="border-b-2 border-earth-light-soil p-4">
+              <div key={index} className="border-b-2 border-earth-brown p-4">
                 <button 
-                    className={`w-full text-left ${mobileView?"text-sm":"text-lg"} bsd text-earth-faded-soil flex justify-between items-center cursor-pointer ${mont.className}`}
+                    className={`w-full text-left ${mobileView?"text-sm":"text-lg"} bsd text-earth-brown font-semibold flex justify-between items-center cursor-pointer ${mont.className}`}
                     onClick={() => toggleAcc(index)}
                 >
                     {faq.question}
                     <span>{openIndex === index ? "▲" : "▼"}</span>
                 </button>
                 <div 
-                    className={`overflow-hidden ${mont.className} text-earth-faded-green ${mobileView?"text-xs":"text-base"} font-bold transition-all duration-500 ease-in-out ${
+                    className={`overflow-hidden ${mont.className} text-earth-brown ${mobileView?"text-xs":"text-base"} transition-all duration-500 ease-in-out ${
                       openIndex === index ? "opacity-100 mt-2" : "max-h-0 opacity-0"
                   }`}
                 >

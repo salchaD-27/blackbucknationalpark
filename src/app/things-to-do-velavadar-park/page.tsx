@@ -4,7 +4,6 @@ import { motion, AnimatePresence, useScroll } from 'framer-motion';
 import Image from "next/image";
 import { useInView } from 'react-intersection-observer';
 import Header from './components/Header';
-import Maps from './components/Maps';
 import Link from 'next/link';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
@@ -52,21 +51,21 @@ export default function Home() {
   return (
     <>
       <Header div0View={div0InView}/>
-      <div ref={div0Ref} className={`${mobileView ? "h-[40vh]" : "h-[85vh]"} w-screen flex flex-col items-end justify-end ${mobileView ? "px-5 py-3" : "px-47 py-38"} relative overflow-hidden ${mont.className}`}>
-        {/* Background Parallax Effect */}
-        <motion.div
-          className="absolute inset-0 w-full h-full"
-          style={{
-            backgroundImage: `url("${basePath}/abtHomeImg.png")`,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-          animate={{
-            y: offsetY * 0.5,
-          }}
-          transition={{ ease: "easeOut", duration: 0.2 }}
-        />
+      <div ref={div0Ref} className={`${mobileView?"h-[500px]":"h-[calc(100vh*7/8)]"} w-screen flex flex-col items-end justify-end ${mobileView?"px-10 py-10":"px-47 py-38"}  relative overflow-hidden ${mont.className}`}>
+              {/* Background Parallax Effect */}
+              <motion.div
+              className="absolute inset-0 w-full h-full"
+              animate={{ y: offsetY * 0.5 }}
+              transition={{ ease: "easeOut", duration: 0.2 }}
+            >
+              <Image
+                src="../safari-velavadar-national-park-10.jpg"
+                alt="Velavadar National Park"
+                fill
+                className="object-cover"
+                priority
+              />
+            </motion.div>
         {/* Content Parallax Effect */}
         <motion.div
           className="relative flex flex-col items-end justify-end z-10 text-white"
@@ -94,29 +93,23 @@ export default function Home() {
 
       <div ref={div1Ref} className={`h-auto  w-screen flex flex-col items-center justify-center ${mont.className}`}>
         {mobileView?(
-          <div className={`h-[10vh] w-full flex flex-col items-center justify-center ${mobileView ? "text-sm" : "text-2xl"} gap-2 text-earth-faded-green`}>
-            <div className='w-full flex items-end justify-center'>Things to do and Best Experiences at</div>
-            <div className='w-full flex items-center justify-center'>
-              <span className="text-earth-brown font-bold">Blackbuck National Park,</span>
-              <span className="text-earth-dark-green font-bold">Velavadar</span>
-            </div>
+          <div className={`h-[150px] px-4 w-full flex flex-col items-center justify-center ${mobileView ? "text-sm" : "text-xl"} font-semibold gap-2 text-earth-brown`}>
+            <div className='w-full flex items-end justify-center'>Things to do and Best Experiences at Blackbuck National Park, Velavadar</div>
           </div>
         ):
         (
-        <div className={`h-[15vh] w-full flex items-center justify-center ${mobileView ? "text-xs" : "text-2xl"} gap-2 text-earth-faded-green`}>
-          Things to do and Best Experiences at&nbsp;
-          <span className="text-earth-brown font-bold">Blackbuck National Park,</span>
-          <span className="text-earth-dark-green font-bold">Velavadar</span>
+        <div className={`h-[150px] w-full flex flex-col items-center justify-center ${mobileView ? "text-sm" : "text-xl"} font-semibold gap-2 text-earth-brown`}>
+            <div className='w-full flex items-end justify-center'>Things to do and Best Experiences at Blackbuck National Park, Velavadar</div>
         </div>
       )}
 
       {mobileView ? (
         <>
           {/* Experience 1 */}
-          <div className="h-[50vh] w-full relative flex items-center justify-center px-4 py-6 text-center my-2">
+          <div className="h-[500px] w-full relative flex items-center justify-center px-4 py-6 text-center my-2">
             <Image
-              src="./ttdDiv1Img1.png"
-              alt="ttdDiv1Img1"
+              src="../safari-velavadar-national-park-10.jpg"
+              alt="Safari in Velavadar Blackbuck National Park"
               fill
               sizes="100vw"
               className="object-cover z-0"
@@ -130,10 +123,10 @@ export default function Home() {
           </div>
 
           {/* Experience 2 */}
-          <div className="h-[50vh] w-full relative flex items-center justify-center px-4 py-6 text-center my-2">
+          <div className="h-[500px] w-full relative flex items-center justify-center px-4 py-6 text-center my-2">
             <Image
-              src="./ttdDiv1Img2.png"
-              alt="ttdDiv1Img2"
+              src="../safari-velavadar-national-park-7.jpg"
+              alt="Safari in Velavadar Blackbuck National Park"
               fill
               sizes="100vw"
               className="object-cover z-0"
@@ -147,10 +140,10 @@ export default function Home() {
           </div>
 
           {/* Experience 3 */}
-          <div className="h-[50vh] w-full relative flex items-center justify-center px-4 py-6 text-center my-2">
+          <div className="h-[500px] w-full relative flex items-center justify-center px-4 py-6 text-center my-2">
             <Image
-              src="./ttdDiv1Img3.png"
-              alt="ttdDiv1Img3"
+              src="../velavadar-national-park-2.jpg"
+              alt="Safari in Velavadar Blackbuck National Park"
               fill
               sizes="100vw"
               className="object-cover z-0"
@@ -164,10 +157,10 @@ export default function Home() {
           </div>
 
           {/* Experience 4 */}
-          <div className="h-[50vh] w-full relative flex items-center justify-center px-4 py-6 text-center my-2">
+          <div className="h-[500px] w-full relative flex items-center justify-center px-4 py-6 text-center my-2">
             <Image
-              src="./ttdDiv1Img4.png"
-              alt="ttdDiv1Img4"
+              src="../Experiences-in-Velavadar-3-1.jpg"
+              alt="Things to do in Velavadar Blackbuck National Park"
               fill
               sizes="100vw"
               className="object-cover z-0"
@@ -181,10 +174,10 @@ export default function Home() {
           </div>
 
           {/* Experience 5 */}
-          <div className="h-[50vh] w-full relative flex items-center justify-center px-4 py-6 text-center my-2">
+          <div className="h-[500px] w-full relative flex items-center justify-center px-4 py-6 text-center my-2">
             <Image
-              src="./ttdDiv1Img5.png"
-              alt="ttdDiv1Img5"
+              src="../safari-velavadar-national-park-8.jpg"
+              alt="Safari in Velavadar Blackbuck National Park"
               fill
               sizes="100vw"
               className="object-cover z-0"
@@ -198,10 +191,10 @@ export default function Home() {
           </div>
 
           {/* Experience 6 */}
-          <div className="h-[50vh] w-full relative flex items-center justify-center px-4 py-6 text-center my-2">
+          <div className="h-[500px] w-full relative flex items-center justify-center px-4 py-6 text-center my-2">
             <Image
-              src="./ttdDiv1Img6.png"
-              alt="ttdDiv1Img6"
+              src="../safari-velavadar-national-park-5.jpg"
+              alt="Velavadar National Park"
               fill
               sizes="100vw"
               className="object-cover z-0"
@@ -216,7 +209,7 @@ export default function Home() {
         </>
       ) : (
         <>
-          <div className="h-[30vh] w-4/5 flex items-center justify-center">
+          <div className="h-[300px] w-4/5 flex items-center justify-center">
             <div className="h-full w-2/3 flex flex-col items-end text-right justify-center">
               <span className='text-lg font-bold text-earth-brown my-4'>Experience 1: Jeep Safari at Blackbuck National Park, Velavadar</span>
               <span className='text-base text-earth-brown'>The Blackbuck national park offers stunning views of the natural landscapes and thriving wildlife experience through its thrilling jeep safaris. The safaris are meant to give travellers a taste of adventure as they can spot various species of flora and fauna in open grasslands. A guided safari tour of the national park is provided for sighting wildlife and photographing the different wonders of nature at Velavadar Blackbuck National park. Spread in a large expanse, the jeep safari experience elevates the spirit and zest of the national park famous for Blackbucks and makes it a destination worth visiting.</span>
@@ -224,8 +217,8 @@ export default function Home() {
             <div className="h-full w-1/3 flex items-center justify-center">
               <motion.div className="relative w-2/3 h-4/5 p-4">
                 <Image
-                  src="./ttdDiv1Img1.png"
-                  alt={`ttdDiv1Img1`}
+                  src="../safari-velavadar-national-park-10.jpg"
+                  alt="Safari in Velavadar Blackbuck National Park"
                   fill
                   sizes="100vw"
                   className="object-cover"
@@ -233,12 +226,12 @@ export default function Home() {
               </motion.div>
             </div>
           </div>
-          <div className="h-[30vh] w-4/5 flex items-center justify-center">
+          <div className="h-[300px] w-4/5 flex items-center justify-center">
             <div className="h-full w-1/3 flex items-center justify-center">
               <motion.div className="relative w-2/3 h-4/5 p-4">
                 <Image
-                  src="./ttdDiv1Img2.png"
-                  alt={`ttdDiv1Img2`}
+                  src="../safari-velavadar-national-park-7.jpg"
+                  alt="Safari in Velavadar Blackbuck National Park"
                   fill
                   sizes="100vw"
                   className="object-cover"
@@ -250,7 +243,7 @@ export default function Home() {
               <span className='text-base text-earth-brown'>The service of alfresco dining is immensely popular among the accommodations surrounding Velavadar Blackbuck national park. Tourists can enjoy a comfortable, relaxing and fresh meal in the lap of nature and its beauty. With an intimate setting, delicious cuisine and an enchanting atmosphere, alfresco meals are the best way to cherish nature’s bounty.</span>
             </div>
           </div>
-          <div className="h-[30vh] w-4/5 flex items-center justify-center">
+          <div className="h-[300px] w-4/5 flex items-center justify-center">
             <div className="h-full w-2/3 flex flex-col items-end text-right justify-center">
               <span className='text-lg font-bold text-earth-brown my-4'>Experience 3: Foot Trails at Velavadar near Bhavnagar</span>
               <span className='text-base text-earth-brown'>Our famous walking tours are designed for people who want to explore their connection with nature on foot. The tours are accompanied by professional naturalists and guides who are trained and have rich knowledge about the prevailing biodiversity. A walk in the various trails around the national park is a great way to soak in the wilderness and learn more about the history, culture and rich biodiversity of Blackbuck Velavadar national park.</span>
@@ -258,8 +251,8 @@ export default function Home() {
             <div className="h-full w-1/3 flex items-center justify-center">
               <motion.div className="relative w-2/3 h-4/5 p-4">
                 <Image
-                  src="./ttdDiv1Img3.png"
-                  alt={`ttdDiv1Img3`}
+                  src="../velavadar-national-park-2.jpg"
+                  alt="Safari in Velavadar Blackbuck National Park"
                   fill
                   sizes="100vw"
                   className="object-cover"
@@ -267,12 +260,12 @@ export default function Home() {
               </motion.div>
             </div>
           </div>
-          <div className="h-[30vh] w-4/5 flex items-center justify-center">
+          <div className="h-[300px] w-4/5 flex items-center justify-center">
             <div className="h-full w-1/3 flex items-center justify-center">
               <motion.div className="relative w-2/3 h-4/5 p-4">
                 <Image
-                  src="./ttdDiv1Img4.png"
-                  alt={`ttdDiv1Img4`}
+                  src="../Experiences-in-Velavadar-3-1.jpg"
+                  alt="Things to do in Velavadar Blackbuck National Park"
                   fill
                   sizes="100vw"
                   className="object-cover"
@@ -284,7 +277,7 @@ export default function Home() {
               <span className='text-base text-earth-brown'>If you wish to enjoy the panoramic views of the countryside at your own pace, then cycling trails are the best choice for you. This tour gives people a chance to plan their own journey in a way that suits them the most. They can explore the beautiful landscapes and the local culture in the surrounding areas of the Blackbuck velavadar national park.</span>
             </div>
           </div>
-          <div className="h-[30vh] w-4/5 flex items-center justify-center">
+          <div className="h-[300px] w-4/5 flex items-center justify-center">
             <div className="h-full w-2/3 flex flex-col items-end text-right justify-center">
               <span className='text-lg font-bold text-earth-brown my-4'>Experience 5: Interactive Sessions at Velavadar near Bhavnagar</span>
               <span className='text-base text-earth-brown'>In order to make the visit to Blackbuck national park at velavadar more exciting and insightful, we organize interactive sessions for our guests to learn more about the culture, habitat, flora and fauna of the region. These sessions are really fun and informal as you can talk and mingle with like-minded people from other parts of the world. The in-house naturalists aim to teach people about the nature and diversity of the place by indulging in wilderness filled conversations.</span>
@@ -292,8 +285,8 @@ export default function Home() {
             <div className="h-full w-1/3 flex items-center justify-center">
               <motion.div className="relative w-2/3 h-4/5 p-4">
                 <Image
-                  src="./ttdDiv1Img5.png"
-                  alt={`ttdDiv1Img5`}
+                  src="../safari-velavadar-national-park-8.jpg"
+                  alt="Safari in Velavadar Blackbuck National Park"
                   fill
                   sizes="100vw"
                   className="object-cover"
@@ -301,12 +294,12 @@ export default function Home() {
               </motion.div>
             </div>
           </div>
-          <div className="h-[30vh] w-4/5 flex items-center justify-center">
+          <div className="h-[300px] w-4/5 flex items-center justify-center">
             <div className="h-full w-1/3 flex items-center justify-center">
               <motion.div className="relative w-2/3 h-4/5 p-4">
                 <Image
-                  src="./ttdDiv1Img6.png"
-                  alt={`ttdDiv1Img6`}
+                  src="../safari-velavadar-national-park-5.jpg"
+                  alt="Velavadar National Park"
                   fill
                   sizes="100vw"
                   className="object-cover"
@@ -325,35 +318,116 @@ export default function Home() {
       </div>
 
 
-      <div ref={div2Ref} className={`min-h-[20vh] w-screen flex flex-col items-center justify-center bg-transparent ${mont.className}`}>
-        <div className={`w-2/3 flex items-center ${mobileView ? "justify-center h-auto flex-col" : "justify-between h-[15vh]"}`}>
-          
-          {[
-            { href: "/contact-us", label: "Book Now" },
-            { href: "/about-velavadar-national-park-bhavnagar", label: "Tariff" },
-            { href: "/things-to-do-velavadar-park", label: "Things To Do" },
-            { href: "/how-to-reach-velavadar", label: "How To Reach" }
-          ].map(({ href, label }) => (
-            <motion.button
-              key={href}
-              className={`relative border-2 border-earth-brown ${mobileView ? "text-xs" : "text-sm"} px-3 py-2 my-3 rounded-full font-light cursor-pointer`}
-              initial={{ backgroundColor: "rgba(0, 0, 0, 0)", backdropFilter: "blur(0px)" }}
-              whileHover={{
-                backgroundColor: "rgba(255, 255, 255, 1)",
-                backdropFilter: "blur(7px)",
+      <div ref={div2Ref} className={`min-h-[300px] w-screen flex flex-col items-center justify-center bg-transparent ${mont.className}`}>
+        <div className={` w-2/3 flex items-center ${mobileView?"justify-center h-auto flex-col":"justify-between h-[15vh]"}`}>
+          <motion.button
+            className={`relative border-2 border-earth-brown ${mobileView?"text-xs":" text-sm "} px-3 py-2 my-3 rounded-full font-light cursor-pointer`}
+            initial={{
+                backgroundColor: 'rgba(0, 0, 0, 0)',
+                backdropFilter: 'blur(0px)',
+                color: 'black'
+            }}
+            whileHover={{
+                backgroundColor: 'rgba(255, 255, 255, 1)',
+                backdropFilter: 'blur(7px)',
                 scale: 1.1,
                 transition: { duration: 0.3 },
                 opacity: 0.77,
-                color: "black"
-              }}
-              whileTap={{ scale: 0.95, opacity: 0.54 }}
+                color: 'black',
+            }}
+            whileTap={{
+                scale: 0.95,
+                opacity: 0.54
+            }}
+        >
+            <motion.span 
+                className="relative z-10"
+                whileHover={{transition: { duration: 0.3 } }}
             >
-              <motion.span className="relative z-10 text-earth-brown">
-                <Link href={href} passHref>{label}</Link>
-              </motion.span>
-            </motion.button>
-          ))}
-          
+                <Link href="/contact-us" passHref>Book Now</Link>
+            </motion.span>
+        </motion.button>
+          <motion.button
+            className={`relative border-2 border-earth-brown ${mobileView?"text-xs":" text-sm "} px-3 py-2 my-3 rounded-full font-light cursor-pointer`}
+            initial={{
+                backgroundColor: 'rgba(0, 0, 0, 0)',
+                backdropFilter: 'blur(0px)',
+                color: 'black'
+            }}
+            whileHover={{
+                backgroundColor: 'rgba(255, 255, 255, 1)',
+                backdropFilter: 'blur(7px)',
+                scale: 1.1,
+                transition: { duration: 0.3 },
+                opacity: 0.77,
+                color: 'black',
+            }}
+            whileTap={{
+                scale: 0.95,
+                opacity: 0.54
+            }}
+        >
+            <motion.span 
+                className="relative z-10"
+                whileHover={{transition: { duration: 0.3 } }}
+            >
+                <Link href="/about-velavadar-national-park-bhavnagar" passHref>Tariff</Link>
+            </motion.span>
+        </motion.button>
+          <motion.button
+            className={`relative border-2 border-earth-brown ${mobileView?"text-xs":" text-sm "} px-3 py-2 my-3 rounded-full font-light cursor-pointer`}
+            initial={{
+                backgroundColor: 'rgba(0, 0, 0, 0)',
+                backdropFilter: 'blur(0px)',
+                color: 'black'
+            }}
+            whileHover={{
+                backgroundColor: 'rgba(255, 255, 255, 1)',
+                backdropFilter: 'blur(7px)',
+                scale: 1.1,
+                transition: { duration: 0.3 },
+                opacity: 0.77,
+                color: 'black',
+            }}
+            whileTap={{
+                scale: 0.95,
+                opacity: 0.54
+            }}
+        >
+            <motion.span 
+                className="relative z-10"
+                whileHover={{transition: { duration: 0.3 } }}
+            >
+              <Link href="/things-to-do-velavadar-park" passHref>Things To Do</Link>
+            </motion.span>
+        </motion.button>
+          <motion.button
+            className={`relative border-2 border-earth-brown ${mobileView?"text-xs":" text-sm "} px-3 py-2 my-3 rounded-full font-light cursor-pointer`}
+            initial={{
+                backgroundColor: 'rgba(0, 0, 0, 0)',
+                backdropFilter: 'blur(0px)',
+                color: 'black'
+            }}
+            whileHover={{
+                backgroundColor: 'rgba(255, 255, 255, 1)',
+                backdropFilter: 'blur(7px)',
+                scale: 1.1,
+                transition: { duration: 0.3 },
+                opacity: 0.77,
+                color: 'black',
+            }}
+            whileTap={{
+                scale: 0.95,
+                opacity: 0.54
+            }}
+        >
+            <motion.span 
+                className="relative z-10"
+                whileHover={{transition: { duration: 0.3 } }}
+            >
+                <Link href="/how-to-reach-velavadar" passHref>How To Reach</Link>
+            </motion.span>
+        </motion.button>
         </div>
       </div>
     </>

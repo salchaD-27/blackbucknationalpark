@@ -11,7 +11,7 @@ export default function ByRail(){
             return () => window.removeEventListener("resize", checkMobile);
           }, []);
     return (
-        <div className={`min-h-[30vh] w-full flex flex-col items-start justify-center text-earth-dark-soil gap-3 ${mont.className}`}>
+        <div className={`min-h-[300px] w-full flex flex-col items-start justify-center text-earth-brown gap-3 ${mont.className}`}>
             <span className={`${mobileView?"text-sm":"text-base"}`}>Tourists can easily access the unique village of Velavadar as it enjoys good rail connectivity to and from the major cities of India.</span>
             <span className={`${mobileView?"text-xs":"text-sm"}`}>
                 The nearest railway station from Velavadar is Dhola which is about 55 km away from the village.<br/>

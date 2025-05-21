@@ -23,7 +23,7 @@ export default function OurBrands(){
         return () => window.removeEventListener("resize", checkMobile);
       }, []);
     return(
-        <div className={`${mobileView?"h-auto":"h-[15vh]"} w-screen flex flex-col items-center justify-center relative socials-bg ${mont.className}`}>
+        <div className={`${mobileView?"h-auto":"h-[150px]"} w-screen flex flex-col items-center justify-center relative socials-bg ${mont.className}`}>
             <div className={`h-[10vh] w-full flex items-center justify-center ${mobileView?"text-lg":"text-2xl"} font-semibold text-earth-brown opacity-77`}>Our Brands</div>
             <div className={` w-2/3 flex ${mobileView?"flex-col h-auto gap-1":"h-[7vh] gap-4"} items-center justify-center `}>
                 {ourbrands.map((item, index) => (

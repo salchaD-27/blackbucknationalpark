@@ -11,7 +11,7 @@ export default function ByAir(){
         return () => window.removeEventListener("resize", checkMobile);
       }, []);
     return (
-        <div className={`min-h-[20vh] w-full flex flex-col items-start justify-center text-earth-dark-soil gap-3 ${mont.className}`}>
+        <div className={`min-h-[200px] w-full flex flex-col items-start justify-center text-earth-brown gap-3 ${mont.className}`}>
             <span className={`${mobileView?"text-xs":"text-sm"}`}>
                 The nearest domestic airport that connects Velavadar to and from other major cities of the country is the Bhavnagar airport in Gujarat.<br/>
                 Furthermore, the closest international airport that connects Velavadar to and from cities across the globe is Sardar Vallabhbhai Patel airport located in Hansol, Ahmedabad.

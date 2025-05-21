@@ -7,10 +7,10 @@ const mont = Montserrat({weight: ['400', '700', '900'], style: ['normal', 'itali
 
 const features = [
   {
-    icon: "./homepageDiv7Icon1.png",
+    icon: "../homepageDiv7Icon1.png",
     title: "Tailor Made 100%",
-    titleColor: "text-earth-dark-soil",
-    descColor: "text-earth-faded-soil",
+    titleColor: "text-earth-brown",
+    descColor: "text-earth-brown",
     description: [
       "We design your holiday specifically to your requirements",
       "Discover your interests at your own speed and travel style",
@@ -19,10 +19,10 @@ const features = [
     ],
   },
   {
-    icon: "./homepageDiv7Icon2.png",
+    icon: "../homepageDiv7Icon2.png",
     title: "Local Knowledge",
-    titleColor: "text-earth-dark-green",
-    descColor: "text-earth-faded-green",
+    titleColor: "text-earth-brown",
+    descColor: "text-earth-brown",
     description: [
       "All our specialists have travelled extensively to travel regions",
       "Point of contact - a specialist will handle your trip from start to finish",
@@ -30,10 +30,10 @@ const features = [
     ],
   },
   {
-    icon: "./homepageDiv7Icon3.png",
+    icon: "../homepageDiv7Icon3.png",
     title: "The Best Guides",
-    titleColor: "text-earth-dark-blue",
-    descColor: "text-earth-faded-blue",
+    titleColor: "text-earth-brown",
+    descColor: "text-earth-brown",
     description: [
       "A good guide is the difference between good trips and memorable ones",
       "The best available guides are handpicked by us",
@@ -41,10 +41,10 @@ const features = [
     ],
   },
   {
-    icon: "./homepageDiv7Icon4.png",
+    icon: "../homepageDiv7Icon4.png",
     title: "Service Pillar",
-    titleColor: "text-earth-soil-red",
-    descColor: "text-earth-faded-soil-red",
+    titleColor: "text-earth-brown",
+    descColor: "text-earth-brown",
     description: [
       "24/7 emergency India support while travelling with us",
     ],
@@ -63,13 +63,11 @@ const WhyUs = () => {
 
   return (
     <div className={`absolute left-0 w-full h-full text-black flex flex-col items-center justify-center ${mont.className}`}>
-      {/* Top Fade */}
-      <div className="absolute top-0 left-0 w-full h-[10vh] bg-gradient-to-b from-white/40 to-transparent"></div>
       {/* Title Section */}
       <div className={`w-screen ${mobileView?"h-auto":"h-1/3"} flex flex-col items-center justify-center my-7 gap-3`}>
-        <div className={`${mobileView?"text-lg":"text-4xl"} font-bold text-earth-brown`}>Why Us</div>
-        <div className={`${mobileView?"text-xs":"text-xl"} text-earth-grey`}>Plan Velvadar Hotel and Safari with</div>
-        <div className={`${mobileView?"text-sm":"text-3xl"} font-bold text-earth-dark-soil`}>Blackbuck Safari Tours</div>
+        <div className={`${mobileView?"text-xl":"text-4xl"} font-bold text-earth-brown`}>Why Us</div>
+        <div className={`${mobileView?"text-xs":"text-xl"} text-earth-brown`}>Plan Velvadar Hotel and Safari with</div>
+        <div className={`${mobileView?"text-sm":"text-3xl"} font-bold text-earth-brown`}>Blackbuck Safari Tours</div>
       </div>
 
       {/* Features Section */}

@@ -12,19 +12,19 @@ import { Montserrat, Montserrat_Alternates, Montserrat_Subrayada, Montserrat_Und
 const mont = Montserrat({weight: ['400', '700', '900'], style: ['normal', 'italic'], subsets: ['latin', 'latin-ext'], display: 'swap', variable: '--font-p', adjustFontFallback: true })
 
 const div1Imgs = [
-  "./safPageDiv2Img1.png",
-  "./safPageDiv2Img2.png",
-  "./safPageDiv2Img3.png",
-  "./safPageDiv2Img4.png",
-  "./safPageDiv2Img5.png",
-  "./safPageDiv2Img6.png",
-  "./safPageDiv2Img7.png",
-  "./safPageDiv2Img8.png",
-  "./safPageDiv2Img9.png",
-  "./safPageDiv2Img10.png",
-  "./safPageDiv2Img11.png",
-  "./safPageDiv2Img12.png",
-  "./safPageDiv2Img13.png",
+  {src: "../hotels-resorts-tours.jpg", alt: 'Velavadar National Park'},
+  {src: "../blackbuck-1.jpg", alt: 'Hotels and Resorts in Blackbuck National Park'},
+  {src: "../safari-velavadar-national-park-3.jpg", alt: 'Velavadar National Park'},
+  {src: "../responsible-tourism-velavadar.jpg", alt: 'Velavadar National Park'},
+  {src: "../blackbuck-national-park-2.jpg", alt: 'Activities in Velavadar National Park'},
+  {src: "../lodges-in-Velavadar-Bhavnagar-5.jpg", alt: 'Accommodation in Velavadar National Park'},
+  {src: "../Experiences-in-Velavadar-2-1.jpg", alt: 'Velavadar National Park'},
+  {src: "../safari-velavadar-national-park-11.jpg", alt: 'Velavadar National Park'},
+  {src: "../safari-velavadar-national-park-7.jpg", alt: 'Experiences in Velavadar Blackbuck National Park'},
+  {src: "../velavadar-national-park-3.jpg", alt: 'Lodges in Velavadar Blackbuck National Park'},
+  {src: "../safari-velavadar-national-park-8.jpg", alt: 'Velavadar National Park'},
+  {src: "../velavadar-national-park-9.jpg", alt: 'Velavadar National Park'},
+  {src: "../lodges-in-Velavadar-Bhavnagar-1-1.jpg", alt: ''},
 ];
 
 export default function Home() {
@@ -67,30 +67,44 @@ export default function Home() {
   return (
     <>
       <Header div0View={div0InView}/>
-      <div ref={div0Ref} className={`${mobileView ? "h-[40vh]" : "h-[85vh]"} w-screen flex flex-col items-end justify-end ${mobileView ? "px-10 py-10" : "px-47 py-38"} relative overflow-hidden ${mont.className}`}>
-        {/* Background Parallax Effect */}
+      <div
+        ref={div0Ref}
+        className={`${
+          mobileView ? "h-[500px]" : "h-[calc(100vh*7/8)]"
+        } w-screen flex flex-col items-end justify-end ${
+          mobileView ? "px-10 py-10" : "px-47 py-38"
+        } relative overflow-hidden ${mont.className}`}
+      >
+        {/* Background Parallax Image */}
         <motion.div
           className="absolute inset-0 w-full h-full"
-          style={{
-            backgroundImage: `url("${basePath}/abtHomeImg.png")`,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-          animate={{
-            y: offsetY * 0.5,
-          }}
+          animate={{ y: offsetY * 0.5 }}
           transition={{ ease: "easeOut", duration: 0.2 }}
-        />
-        {/* Content Parallax Effect */}
+        >
+          <Image
+            src="../responsible-tourism-velavadar.jpg"
+            alt="Velavadar National Park"
+            fill
+            className="object-cover"
+            priority
+          />
+        </motion.div>
+
+        {/* Foreground Content Parallax */}
         <motion.div
           className="relative flex flex-col items-end justify-end z-10 text-white"
-          animate={{ y: -offsetY * 0.2 }} 
+          animate={{ y: -offsetY * 0.2 }}
           transition={{ ease: "easeOut", duration: 0.2 }}
         >
           <span className={`${mobileView ? "text-lg" : "text-4xl"} font-bold`}>Safari</span>
           <div className="h-auto w-full flex items-center justify-end">
-            <motion.button className={`${mobileView ? "text-xs" : "text-lg"} text-white/90 py-1 cursor-pointer ${mont.className}`} whileHover={{ scale: 1.1, color: "#b5aa9c" }} whileTap={{ scale: 0.9 }}>
+            <motion.button
+              className={`${
+                mobileView ? "text-xs" : "text-lg"
+              } text-white/90 py-1 cursor-pointer ${mont.className}`}
+              whileHover={{ scale: 1.1, color: "#b5aa9c" }}
+              whileTap={{ scale: 0.9 }}
+            >
               <Link href="/" passHref>Home</Link>
             </motion.button>
             <span className={`${mobileView ? "text-xs" : "text-lg"}`}>&nbsp;► Safari</span>
@@ -99,141 +113,189 @@ export default function Home() {
       </div>
 
 
-      <div
-        ref={div1Ref}
-        className={`w-screen flex flex-col items-center justify-center ${mont.className}`}
-        style={{ height: `calc(45vw + 20vh)` }} // Adjusted for 5 rows
-      >
-        <div className={`w-full h-[15vh] flex items-center justify-center ${mobileView?"text-xs":"text-3xl"} gap-2 text-earth-faded-green`}>
-          Safari Moments in
-          <span className="text-earth-dark-green font-bold"> Velavadar </span>
-          <span className="text-earth-dark-soil font-bold"> Blackbuck National Park</span>
-        </div>
 
+      <div ref={div1Ref} className={`w-screen h-auto flex flex-col items-center justify-center ${mont.className}`}>
+        <div className={`w-full ${mobileView?'h-[100px]':'h-[150px]'} flex items-center justify-center ${mobileView?"text-xs":"text-xl"} font-semibold gap-2 text-earth-brown`}>
+          Safari Moments inVelavadar Blackbuck National Park
+        </div>
         {mobileView ? (
           <div className="w-full overflow-x-auto whitespace-nowrap px-2 py-4">
             <div className="flex gap-2">
-              {div1Imgs.slice(0, 13).map((src, index) => (
+              {div1Imgs.slice(0, 13).map((img, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
-                  animate={(div1InView || div2InView) ? { opacity: 1 } : { opacity: 0 }}
+                  animate={(div1InView || div2InView) ? { opacity: 1, y: 0 } : {}}
                   transition={{
                     duration: 0.6,
                     delay: index * 0.12,
-                    ease: "easeOut"
+                    ease: "easeOut",
                   }}
                   whileHover={{ scale: 1.03 }}
-                  className="w-[60vw] h-[40vw] rounded-lg shadow-md flex-shrink-0"
-                  style={{
-                    backgroundImage: `url('${src}')`,
-                    backgroundPosition: "center",
-                    backgroundSize: "cover",
-                    backgroundRepeat: "no-repeat",
-                  }}
-                />
+                  className="relative w-[60vw] h-[40vw] rounded-lg shadow-md flex-shrink-0 overflow-hidden"
+                >
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover"
+                    sizes="60vw"
+                    priority={index < 2} // optional LCP optimization
+                  />
+                </motion.div>
               ))}
             </div>
+            <div className='w-full h-[100px]'></div>
           </div>
         ) : (
-          // Desktop: 5x3 Grid
-          <div className={`w-full h-[45vw] px-2 grid gap-2`}
+          <div
+            className="w-full h-[700px] px-2 grid gap-2"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(5, 1fr)",
               gridTemplateRows: "repeat(3, 1fr)",
-              placeItems: "center"
-            }}>
-            {div1Imgs.slice(0, 13).map((src, index) => (
+              placeItems: "center",
+            }}
+          >
+            {div1Imgs.slice(0, 15).map((img, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-                animate={(div1InView || div2InView) ? { opacity: 1 } : { opacity: 0 }}
+                animate={(div1InView || div2InView) ? { opacity: 1, y: 0 } : {}}
                 transition={{
                   duration: 0.6,
                   delay: index * 0.12,
-                  ease: "easeOut"
+                  ease: "easeOut",
                 }}
                 whileHover={{ scale: 1.03 }}
-                className="w-full h-full rounded-lg shadow-md"
-                style={{
-                  backgroundImage: `url('${src}')`,
-                  backgroundPosition: "center",
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                }}
-              />
+                className="relative w-full h-full rounded-lg overflow-hidden shadow-md"
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 20vw"
+                  priority={index < 5} // prioritize top row
+                />
+              </motion.div>
             ))}
           </div>
         )}
       </div>
 
 
-      <div ref={div2Ref} className={`min-h-[35vh] w-screen flex flex-col items-center justify-center bg-transparent ${mont.className}`}>
-        {/* Top Fade */}
-        {/* <div className="absolute top-0 left-0 w-full h-[10vh] z-[10] bg-gradient-to-b from-neutral-700/40 to-transparent"></div> */}
-        <span className={`${mobileView?"text-base px-2 text-center":"text-3xl"} font-bold text-earth-brown`}>Book accommodation and Safari in Velavadar Blackbuck National Park</span>
+      <div ref={div2Ref} className={`min-h-[300px] w-screen flex flex-col items-center justify-center bg-transparent ${mont.className}`}>
+        <span className={`${mobileView?"text-base px-2 text-center":"text-2xl"} font-bold text-earth-brown`}>Book accommodation and Safari in Velavadar Blackbuck National Park</span>
         <div className={` w-2/3 flex items-center ${mobileView?"justify-center h-auto flex-col":"justify-between h-[15vh]"}`}>
           <motion.button
             className={`relative border-2 border-earth-brown ${mobileView?"text-xs":" text-sm "} px-3 py-2 my-3 rounded-full font-light cursor-pointer`}
-            initial={{ backgroundColor: "rgba(0, 0, 0, 0)", backdropFilter: "blur(0px)" }}
-            whileHover={{
-              backgroundColor: "rgba(255, 255, 255, 1)",
-              backdropFilter: "blur(7px)",
-              scale: 1.1,
-              transition: { duration: 0.3 },
-              opacity: 0.77,
-              color: "black"
+            initial={{
+                backgroundColor: 'rgba(0, 0, 0, 0)',
+                backdropFilter: 'blur(0px)',
+                color: 'black'
             }}
-            whileTap={{ scale: 0.95, opacity: 0.54 }}
-          >
-            <motion.span className="relative z-10 text-earth-brown"><Link href="/contact-us" passHref>Book Now</Link></motion.span>
-          </motion.button>
+            whileHover={{
+                backgroundColor: 'rgba(255, 255, 255, 1)',
+                backdropFilter: 'blur(7px)',
+                scale: 1.1,
+                transition: { duration: 0.3 },
+                opacity: 0.77,
+                color: 'black',
+            }}
+            whileTap={{
+                scale: 0.95,
+                opacity: 0.54
+            }}
+        >
+            <motion.span 
+                className="relative z-10"
+                whileHover={{transition: { duration: 0.3 } }}
+            >
+                <Link href="/contact-us" passHref>Book Now</Link>
+            </motion.span>
+        </motion.button>
           <motion.button
             className={`relative border-2 border-earth-brown ${mobileView?"text-xs":" text-sm "} px-3 py-2 my-3 rounded-full font-light cursor-pointer`}
-            initial={{ backgroundColor: "rgba(0, 0, 0, 0)", backdropFilter: "blur(0px)" }}
-            whileHover={{
-              backgroundColor: "rgba(255, 255, 255, 1)",
-              backdropFilter: "blur(7px)",
-              scale: 1.1,
-              transition: { duration: 0.3 },
-              opacity: 0.77,
-              color: "black"
+            initial={{
+                backgroundColor: 'rgba(0, 0, 0, 0)',
+                backdropFilter: 'blur(0px)',
+                color: 'black'
             }}
-            whileTap={{ scale: 0.95, opacity: 0.54 }}
-          >
-            <motion.span className="relative z-10 text-earth-brown"><Link href="/about-velavadar-national-park-bhavnagar" passHref>Tariff</Link></motion.span>
-          </motion.button>
+            whileHover={{
+                backgroundColor: 'rgba(255, 255, 255, 1)',
+                backdropFilter: 'blur(7px)',
+                scale: 1.1,
+                transition: { duration: 0.3 },
+                opacity: 0.77,
+                color: 'black',
+            }}
+            whileTap={{
+                scale: 0.95,
+                opacity: 0.54
+            }}
+        >
+            <motion.span 
+                className="relative z-10"
+                whileHover={{transition: { duration: 0.3 } }}
+            >
+                <Link href="/about-velavadar-national-park-bhavnagar" passHref>Tariff</Link>
+            </motion.span>
+        </motion.button>
           <motion.button
             className={`relative border-2 border-earth-brown ${mobileView?"text-xs":" text-sm "} px-3 py-2 my-3 rounded-full font-light cursor-pointer`}
-            initial={{ backgroundColor: "rgba(0, 0, 0, 0)", backdropFilter: "blur(0px)" }}
-            whileHover={{
-              backgroundColor: "rgba(255, 255, 255, 1)",
-              backdropFilter: "blur(7px)",
-              scale: 1.1,
-              transition: { duration: 0.3 },
-              opacity: 0.77,
-              color: "black"
+            initial={{
+                backgroundColor: 'rgba(0, 0, 0, 0)',
+                backdropFilter: 'blur(0px)',
+                color: 'black'
             }}
-            whileTap={{ scale: 0.95, opacity: 0.54 }}
-          >
-            <motion.span className="relative z-10 text-earth-brown"><Link href="/things-to-do-velavadar-park" passHref>Things To Do</Link></motion.span>
-          </motion.button>
+            whileHover={{
+                backgroundColor: 'rgba(255, 255, 255, 1)',
+                backdropFilter: 'blur(7px)',
+                scale: 1.1,
+                transition: { duration: 0.3 },
+                opacity: 0.77,
+                color: 'black',
+            }}
+            whileTap={{
+                scale: 0.95,
+                opacity: 0.54
+            }}
+        >
+            <motion.span 
+                className="relative z-10"
+                whileHover={{transition: { duration: 0.3 } }}
+            >
+              <Link href="/things-to-do-velavadar-park" passHref>Things To Do</Link>
+            </motion.span>
+        </motion.button>
           <motion.button
             className={`relative border-2 border-earth-brown ${mobileView?"text-xs":" text-sm "} px-3 py-2 my-3 rounded-full font-light cursor-pointer`}
-            initial={{ backgroundColor: "rgba(0, 0, 0, 0)", backdropFilter: "blur(0px)" }}
-            whileHover={{
-              backgroundColor: "rgba(255, 255, 255, 1)",
-              backdropFilter: "blur(7px)",
-              scale: 1.1,
-              transition: { duration: 0.3 },
-              opacity: 0.77,
-              color: "black"
+            initial={{
+                backgroundColor: 'rgba(0, 0, 0, 0)',
+                backdropFilter: 'blur(0px)',
+                color: 'black'
             }}
-            whileTap={{ scale: 0.95, opacity: 0.54 }}
-          >
-            <motion.span className="relative z-10 text-earth-brown"><Link href="/how-to-reach-velavadar" passHref>How To Reach</Link></motion.span>
-          </motion.button>
+            whileHover={{
+                backgroundColor: 'rgba(255, 255, 255, 1)',
+                backdropFilter: 'blur(7px)',
+                scale: 1.1,
+                transition: { duration: 0.3 },
+                opacity: 0.77,
+                color: 'black',
+            }}
+            whileTap={{
+                scale: 0.95,
+                opacity: 0.54
+            }}
+        >
+            <motion.span 
+                className="relative z-10"
+                whileHover={{transition: { duration: 0.3 } }}
+            >
+                <Link href="/how-to-reach-velavadar" passHref>How To Reach</Link>
+            </motion.span>
+        </motion.button>
         </div>
       </div>
     </>

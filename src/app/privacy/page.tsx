@@ -45,21 +45,21 @@ export default function Home() {
   return (
     <>
       <Header div0View={div0InView}/>
-      <div ref={div0Ref} className={`${mobileView ? "h-[40vh]" : "h-[85vh]"} w-screen flex flex-col items-end justify-end ${mobileView ? "px-5 py-3" : "px-47 py-38"} relative overflow-hidden ${mont.className}`}>
+     <div ref={div0Ref} className={`${mobileView?"h-[500px]":"h-[calc(100vh*7/8)]"} w-screen flex flex-col items-end justify-end ${mobileView?"px-10 py-10":"px-47 py-38"}  relative overflow-hidden ${mont.className}`}>
         {/* Background Parallax Effect */}
         <motion.div
-          className="absolute inset-0 w-full h-full"
-          style={{
-            backgroundImage: `url("${basePath}/abtHomeImg.png")`,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-          animate={{
-            y: offsetY * 0.5,
-          }}
-          transition={{ ease: "easeOut", duration: 0.2 }}
+        className="absolute inset-0 w-full h-full"
+        animate={{ y: offsetY * 0.5 }}
+        transition={{ ease: "easeOut", duration: 0.2 }}
+      >
+        <Image
+          src="../safari-velavadar-national-park-10.jpg"
+          alt="Velavadar National Park"
+          fill
+          className="object-cover"
+          priority
         />
+      </motion.div>
         {/* Content Parallax Effect */}
         <motion.div
           className="relative flex flex-col items-end justify-end z-10 text-white"
@@ -86,13 +86,11 @@ export default function Home() {
 
 
       <div ref={div1Ref} className={`h-auto  w-screen flex flex-col items-center justify-center ${mont.className}`}>
-        <div className={`h-[15vh] w-full flex items-center justify-center ${mobileView ? "text-sm" : "text-2xl"} text-earth-grey`}>
-          Wildlife in&nbsp;
-          <span className="text-earth-brown font-bold">Blackbuck National Park,&nbsp;</span>
-          <span className="text-earth-dark-green font-bold">Velavadar</span>
+        <div className={`h-[150px] w-full flex items-center justify-center ${mobileView ? "text-sm" : "text-xl"} font-semibold text-earth-brown`}>
+          Wildlife in Blackbuck National Park, Velavadar
         </div>
 
-        <div className="h-auto w-2/3 flex flex-col items-start justify-center text-earth-brown gap-4">
+        <div className="h-auto w-2/3 flex flex-col items-start justify-center text-earth-brown gap-7">
           <div className="h-[5vh] w-2/3 flex items-center justify-between "></div>
 
           <span className={`${mobileView?"text-xs":"text-base"}`}>At Blackbuck National Park, Velavadar near Bhavnagar, accessible from https://www.blackbucknationalpark.com/, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Blackbuck National Park, Velavadar near Bhavnagar and how we use i</span>

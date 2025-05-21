@@ -51,21 +51,21 @@ export default function Home() {
   return (
     <>
       <Header div0View={div0InView}/>
-      <div ref={div0Ref} className={`${mobileView ? "h-[40vh]" : "h-[85vh]"} w-screen flex flex-col items-end justify-end ${mobileView ? "px-5 py-3" : "px-47 py-38"} relative overflow-hidden ${mont.className}`}>
+      <div ref={div0Ref} className={`${mobileView?"h-[500px]":"h-[calc(100vh*7/8)]"} w-screen flex flex-col items-end justify-end ${mobileView?"px-10 py-10":"px-47 py-38"}  relative overflow-hidden ${mont.className}`}>
         {/* Background Parallax Effect */}
         <motion.div
-          className="absolute inset-0 w-full h-full"
-          style={{
-            backgroundImage: `url("${basePath}/abtHomeImg.png")`,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-          animate={{
-            y: offsetY * 0.5,
-          }}
-          transition={{ ease: "easeOut", duration: 0.2 }}
+        className="absolute inset-0 w-full h-full"
+        animate={{ y: offsetY * 0.5 }}
+        transition={{ ease: "easeOut", duration: 0.2 }}
+      >
+        <Image
+          src="../safari-velavadar-national-park-10.jpg"
+          alt="Velavadar National Park"
+          fill
+          className="object-cover"
+          priority
         />
+      </motion.div>
         {/* Content Parallax Effect */}
         <motion.div
           className="relative flex flex-col items-end justify-end z-10 text-white"
@@ -92,18 +92,16 @@ export default function Home() {
 
 
       <div ref={div1Ref} className={`h-auto  w-screen flex flex-col items-center justify-center ${mont.className}`}>
-      <div className={`h-[15vh] w-full flex items-center justify-center ${mobileView ? "text-xs" : "text-2xl"} text-earth-grey`}>
-        Responsible Tourism in&nbsp;
-        <span className="text-earth-brown font-bold">Blackbuck National Park,&nbsp;</span>
-        <span className="text-earth-dark-green font-bold">Velavadar</span>
+      <div className={`h-[150px] w-full flex items-center justify-center ${mobileView ? "text-xs" : "text-xl"} font-semibold text-earth-brown`}>
+        Responsible Tourism in Blackbuck National Park, Velavadar
       </div>
 
       {mobileView ? (
         <>
-          <div className="h-[50vh] w-full relative flex items-center justify-center px-4 py-6 text-center my-2">
+          <div className="h-[500px] w-full relative flex items-center justify-center px-4 py-6 text-center my-2">
             <Image
-              src="./sustDiv1Img1.png"
-              alt="sustDiv1Img1"
+              src="../safari-velavadar-national-park-10.jpg"
+              alt="Velavadar National Park"
               fill
               sizes="100vw"
               className="object-cover z-0"
@@ -116,10 +114,10 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="h-[50vh] w-full relative flex items-center justify-center px-4 py-6 text-center my-2">
+          <div className="h-[500px] w-full relative flex items-center justify-center px-4 py-6 text-center my-2">
             <Image
-              src="./sustDiv1Img2.png"
-              alt="sustDiv1Img2"
+              src="../velavadar-national-park-12.jpg"
+              alt="Safari in Velavadar Blackbuck National Park"
               fill
               sizes="100vw"
               className="object-cover z-0"
@@ -134,7 +132,7 @@ export default function Home() {
         </>
       ) : (
         <>
-          <div className="h-[30vh] w-4/5 flex items-center justify-center">
+          <div className="h-[300px] w-4/5 flex items-center justify-center">
             <div className="h-full w-2/3 flex flex-col items-end text-right justify-center">
               <span className='text-lg font-bold text-earth-brown'>"We strongly believe We are part of the natural system not above it”</span>
               <span className='text-base text-earth-brown'>
@@ -144,8 +142,8 @@ export default function Home() {
             <div className="h-full w-1/3 flex items-center justify-center">
               <motion.div className="relative w-2/3 h-4/5 p-4">
                 <Image
-                  src="./sustDiv1Img1.png"
-                  alt="sustDiv1Img1"
+                  src="../safari-velavadar-national-park-10.jpg"
+                  alt="Velavadar National Park"
                   fill
                   sizes="100vw"
                   className="object-cover"
@@ -154,7 +152,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="h-[30vh] w-4/5 flex items-center justify-center">
+          <div className="h-[300px] w-4/5 flex items-center justify-center">
             <div className="h-full w-2/3 flex flex-col items-end text-right justify-center">
               <span className='text-base text-earth-brown'>
                 In order to ensure the prosperity of their flora and faunal species, people address the relevant concerns and try to create an improved lifestyle within the existing ecosystem. To preserve the natural habitats, the people of Velavadar have consciously made efforts to learn and earn a livelihood by serving nature. They strive to provide the best services to people coming from all over the world while uniting the efforts of sightseeing along with the preservation of its historic biodiversity.
@@ -166,8 +164,8 @@ export default function Home() {
             <div className="h-full w-1/3 flex items-center justify-center">
               <motion.div className="relative w-2/3 h-4/5 p-4">
                 <Image
-                  src="./sustDiv1Img2.png"
-                  alt="sustDiv1Img2"
+                  src="../velavadar-national-park-12.jpg"
+                  alt="Safari in Velavadar Blackbuck National Park"
                   fill
                   sizes="100vw"
                   className="object-cover"
@@ -178,13 +176,13 @@ export default function Home() {
         </>
       )}
 
-        <div className={`${mobileView?"h-[35vh]":"h-[20vh]"} w-4/5 flex items-center justify-center`}>
+        <div className={`${mobileView?"h-[350px]":"h-[200px]"} w-4/5 flex items-center justify-center`}>
           <div className="h-full w-full flex flex-col items-start text-left justify-center">
             <span className={`${mobileView?"text-sm":"text-lg"} font-bold text-earth-brown my-4`}>Wildlife Conservation:</span>
             <span className={`${mobileView?"text-xs":"text-base"} text-earth-brown`}>The endangered blackbucks are the star faunal species of Velavadar. The thoughtful guidelines provided by the people of Velavadar to tourists and nature enthusiasts helped to preserve these endangered species. In 1960, the population of blackbucks was just 200, but at present, it is a conservatory of up to 3000 blackbucks. The protection and conservation could not have been possible without the assistance and support of the local people.</span>
           </div>
         </div>
-        <div className={`${mobileView ? "h-[35vh]" : "h-[20vh]"} w-4/5 flex items-center justify-center`}>
+        <div className={`${mobileView ? "h-[350px]" : "h-[200px]"} w-4/5 flex items-center justify-center`}>
           <div className="h-full w-full flex flex-col items-start text-left justify-center">
             <span className={`${mobileView ? "text-sm" : "text-lg"} font-bold text-earth-brown my-4`}>Localized Experience:</span>
             <span className={`${mobileView ? "text-xs" : "text-base"} text-earth-brown`}>
@@ -193,7 +191,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={`${mobileView ? "h-[30vh]" : "h-[15vh]"} w-4/5 flex items-center justify-center`}>
+        <div className={`${mobileView ? "h-[300px]" : "h-[150px]"} w-4/5 flex items-center justify-center`}>
           <div className="h-full w-full flex flex-col items-start text-left justify-center">
             <span className={`${mobileView ? "text-sm" : "text-lg"} font-bold text-earth-brown my-4`}>Maximize Impact:</span>
             <span className={`${mobileView ? "text-xs" : "text-base"} text-earth-brown`}>
@@ -202,7 +200,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={`${mobileView ? "h-[35vh]" : "h-[20vh]"} w-4/5 flex items-center justify-center`}>
+        <div className={`${mobileView ? "h-[350px]" : "h-[200px]"} w-4/5 flex items-center justify-center`}>
           <div className="h-full w-full flex flex-col items-start text-left justify-center">
             <span className={`${mobileView ? "text-xs" : "text-sm"} text-earth-brown`}>
               The tourism sector is a substantial domain of employment opportunities and economic growth across the world. The rise in the number of travellers has a considerable impact on the environment, resources, and life of the local inhabitants. It is the responsibility of both visitors and service providers to ensure that the factor of sustainability is addressed and maintained. Velavadar is renowned for being an exotic destination for exploring wildlife in Gujarat. The highlight of Velavadar is its unique grassland ecosystem and thus, the tourism authorities in Velavadar try to minimize the negative effects of travel on nature. Although it might take a little time to make a notable difference to preserve the ecosystem, rural economy, and wildlife. But slowly and gradually, these small steps will lead to something bigger and better.

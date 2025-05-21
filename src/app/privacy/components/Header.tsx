@@ -53,7 +53,7 @@ const AnimatedMenuButton = ({ div0View, setIsOpen, isOpen }: MenuButtonProps) =>
   return (
     <button
       onClick={() => setIsOpen(!isOpen)}
-      className={`z-50 py-3 px-5 ${mobileView?"h-4/5 w-1/3":"h-auto w-auto"} ${div0View?"bg-white/81":"bg-black/81"} shadow-lg rounded-full flex items-center justify-center`}
+      className={`z-50 py-3 px-5 ${mobileView?"h-4/5 w-1/3":"h-auto w-auto"} bg-white/81 shadow-lg rounded-full flex items-center justify-center`}
     >
       <motion.div
         initial="closed"
@@ -67,7 +67,7 @@ const AnimatedMenuButton = ({ div0View, setIsOpen, isOpen }: MenuButtonProps) =>
       >
         {/* Top Line */}
         <motion.div
-          className={`${mobileView?(div0View?"w-6":"w-5"):"w-6"} h-0.5 ${div0View?"bg-black":"bg-white"} rounded-full`}
+          className={`${mobileView?(div0View?"w-6":"w-5"):"w-6"} h-0.5 bg-black rounded-full`}
           variants={{
             closed: { rotate: 0, y: 0 },
             open: { rotate: 45, y: 8 },
@@ -77,7 +77,7 @@ const AnimatedMenuButton = ({ div0View, setIsOpen, isOpen }: MenuButtonProps) =>
         
         {/* Middle Line (Hidden when open) */}
         <motion.div
-          className={`${mobileView?(div0View?"w-6":"w-5"):"w-6"} h-0.5 ${div0View?"bg-black":"bg-white"} rounded-full`}
+          className={`${mobileView?(div0View?"w-6":"w-5"):"w-6"} h-0.5 bg-black rounded-full`}
           variants={{
             closed: { opacity: 1 },
             open: { opacity: 0 },
@@ -87,7 +87,7 @@ const AnimatedMenuButton = ({ div0View, setIsOpen, isOpen }: MenuButtonProps) =>
         
         {/* Bottom Line */}
         <motion.div
-          className={`${mobileView?(div0View?"w-6":"w-5"):"w-6"} h-0.5 ${div0View?"bg-black":"bg-white"} rounded-full`}
+          className={`${mobileView?(div0View?"w-6":"w-5"):"w-6"} h-0.5 bg-black rounded-full`}
           variants={{
             closed: { rotate: 0, y: 0 },
             open: { rotate: -45, y: -8 },
@@ -112,7 +112,7 @@ export default function Header({div0View}:HeaderProps){
     return(
       <>
   {/* Header Bar */}
-  <div className={`${mobileView? (div0View ? "h-[7vh] bg-white/30" : "h-[5vh] bg-black/30" ): (div0View ? "h-[9vh] bg-white/30" : "h-[7vh] bg-black/30")} w-2/3 transition-all duration-300 fixed top-4 left-1/2 -translate-x-1/2 z-[100] backdrop-blur-md flex items-center justify-center rounded-full shadow-lg`}>
+  <div className={`${mobileView? (div0View ? "h-[50px] bg-white/30" : "h-[40px] bg-black/30" ): (div0View ? "h-[70px] bg-white/30" : "h-[60px] bg-black/30")} w-2/3 transition-all duration-300 fixed top-4 left-1/2 -translate-x-1/2 z-[100] backdrop-blur-md flex items-center justify-center rounded-full shadow-lg`}>
     <div className="h-full w-4/5 flex items-center justify-center">
       
       {/* Logo Button */}
@@ -125,21 +125,26 @@ export default function Header({div0View}:HeaderProps){
           transition={{ type: "spring", stiffness: 180, damping: 14 }}
         >
           <Image
-            src={div0View ? "./headerLogoInitialWhite.png" : "./headerLogoInitialBlack.png"}
-            alt="Safari Logo"
-            height={div0View ? 110 : 38}
-            width={div0View ? 110 : 38}
+            src={'../Blackbuck-national-park.png'} 
+            alt=""
+            fill
             className="object-contain opacity-77 transition-all duration-500"
           />
         </motion.button>
       ) : (
-        <motion.button
-          className={`w-1/2 h-3/5 bg-contain bg-center text-black text-3xl font-extrabold cursor-pointer relative overflow-hidden`}
-          style={{ backgroundImage: `url('${div0View ? "./headerLogoInitialWhite.png" : "./headerLogoInitialBlack.png"}')`, backgroundRepeat: "no-repeat" }}
+         <motion.button
+          className="w-1/2 h-4/5 text-black text-3xl font-extrabold cursor-pointer relative overflow-hidden flex items-center justify-center"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.7, opacity: 0.77 }}
           transition={{ type: "spring", stiffness: 254, damping: 17 }}
-        />
+        >
+          <Image
+            src="/Blackbuck-national-park.png"
+            alt=""
+            fill
+            className="object-contain opacity-77"
+          />
+        </motion.button>
       )}
 
       </div>
@@ -158,7 +163,7 @@ export default function Header({div0View}:HeaderProps){
       animate={{ x: 0 }}
       exit={{ x: "100%" }}
       transition={{ type: "spring", stiffness: 200, damping: 20 }}
-      className={`fixed top-0 right-0 h-screen ${mobileView?"w-2/3":"w-1/4"} header-menu-bg-gradient backdrop-blur-xl shadow-xl flex flex-col items-start justify-center gap-4 px-6 py-10 z-[90]`}
+      className={`fixed top-0 right-0 h-screen ${mobileView?"w-2/3":"w-1/4"} bg-earth-brown/80 backdrop-blur-xl shadow-xl flex flex-col items-start justify-center gap-4 px-6 py-10 z-[90]`}
     >
       {menuItems.map((item, index) => (
         <div key={index} className="flex flex-col items-start justify-center">

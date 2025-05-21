@@ -4,7 +4,6 @@ import { motion, AnimatePresence, useScroll } from 'framer-motion';
 import Image from "next/image";
 import { useInView } from 'react-intersection-observer';
 import Header from './components/Header';
-import Maps from './components/Maps';
 import Link from 'next/link';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
@@ -77,21 +76,21 @@ export default function Home() {
   return (
     <>
       <Header div0View={div0InView}/>
-      <div ref={div0Ref} className={`${mobileView ? "h-[40vh]" : "h-[85vh]"} w-screen flex flex-col items-end justify-end ${mobileView ? "px-5 py-3" : "px-47 py-38"} relative overflow-hidden ${mont.className}`}>
+      <div ref={div0Ref} className={`${mobileView?"h-[500px]":"h-[calc(100vh*7/8)]"} w-screen flex flex-col items-end justify-end ${mobileView?"px-10 py-10":"px-47 py-38"}  relative overflow-hidden ${mont.className}`}>
         {/* Background Parallax Effect */}
         <motion.div
-          className="absolute inset-0 w-full h-full"
-          style={{
-            backgroundImage: `url("${basePath}/abtHomeImg.png')`,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-          animate={{
-            y: offsetY * 0.5,
-          }}
-          transition={{ ease: "easeOut", duration: 0.2 }}
+        className="absolute inset-0 w-full h-full"
+        animate={{ y: offsetY * 0.5 }}
+        transition={{ ease: "easeOut", duration: 0.2 }}
+      >
+        <Image
+          src="../contact-velavadar-bookings.jpg"
+          alt="Contact to book hotels, safari and tours for Velavadar Blackbuck National Park"
+          fill
+          className="object-cover"
+          priority
         />
+      </motion.div>
         {/* Content Parallax Effect */}
         <motion.div
           className="relative flex flex-col items-end justify-end z-10 text-white"
@@ -117,7 +116,7 @@ export default function Home() {
       </div>
 
 
-      <div ref={div1Ref} className={`${mobileView ? "h-[170vh]" : "h-screen"} w-screen relative z-10 flex items-center justify-center text-3xl text-black home-page-bg-div3 ${mont.className}`}>
+      <div ref={div1Ref} className={`${mobileView ? "h-[1500px]" : "h-[900px]"} w-screen relative z-10 flex items-center justify-center text-3xl text-black home-page-bg-div3 ${mont.className}`}>
         <div className={`h-4/5 w-4/5 bg-black/54 rounded-xl flex ${mobileView ? "flex-col" : ""} items-center justify-center`} style={{ backdropFilter: 'blur(7px)' }}>
           
           {/* Left - Contact Details */}
@@ -181,9 +180,19 @@ export default function Home() {
           
 
 
-      <div ref={div2Ref} className={`h-[50vh] w-screen flex flex-col items-center justify-center bg-transparent py-8 ${mont.className}`}>
+      <div ref={div2Ref} className={`h-[500px] w-screen flex flex-col items-center justify-center bg-transparent py-8 ${mont.className}`}>
         <div className="h-[5vh] w-full"></div>
-        <div className="h-[40vh] w-2/3 border-2 border-earth-brown rounded-xl"><Maps/></div>
+       <div className="h-[40vh] w-2/3 border-2 border-earth-brown overflow-hidden">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14792.604960683953!2d72.0203924!3d22.0438094!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x46f110b6a9e5506a!2sHotels%20and%20Resorts%20in%20Blackbuck%20National%20Park%20Velavadar!5e0!3m2!1sen!2sin!4v1664719442212!5m2!1sen!2sin"
+          className="w-full h-full"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
         <div className="h-[5vh] w-full"></div>
       </div>
     </>

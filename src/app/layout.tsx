@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "./components/Header2";
 import Footer from "./components/Footer";
 import Image from 'next/image'
 import { motion } from "framer-motion";

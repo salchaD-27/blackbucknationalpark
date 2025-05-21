@@ -29,10 +29,10 @@ const lodgeFacs = [
 ];
 
 const div2Imgs = [
-  "./accPageDiv2Img1.png",
-  "./accPageDiv2Img2.png",
-  "./accPageDiv2Img3.png",
-  "./accPageDiv2Img4.png",
+  {src: "../lodges-in-Velavadar-Bhavnagar-5.jpg", alt:'Accommodation in Velavadar National Park'},
+  {src: "../lodges-in-Velavadar-Bhavnagar-3.jpg", alt:'Activities in Velavadar National Park'},
+  {src: "../safari-velavadar-national-park-11.jpg", alt:'Velavadar National Park'},
+  {src: "../lodges-in-Velavadar-Bhavnagar-1-1.jpg", alt:''},
 ];
 
 export default function Home() {
@@ -75,21 +75,22 @@ export default function Home() {
   return (
     <>
       <Header div0View={div0InView}/>
-        <div ref={div0Ref} className={`${mobileView?"h-[40vh]":"h-[85vh]"} w-screen flex flex-col items-end justify-end ${mobileView?"px-10 py-10":"px-47 py-38"}  relative overflow-hidden ${mont.className}`}>
+        <div ref={div0Ref} className={`${mobileView?"h-[500px]":"h-[calc(100vh*7/8)]"} w-screen flex flex-col items-end justify-end ${mobileView?"px-10 py-10":"px-47 py-38"}  relative overflow-hidden ${mont.className}`}>
           {/* Background Parallax Effect */}
-          <motion.div
-            className="absolute inset-0 w-full h-full"
-            style={{
-              backgroundImage: `url('${basePath}/lpimg3.png')`,
-              backgroundPosition: "center",
-              backgroundSize: "cover",  
-              backgroundRepeat: "no-repeat",
-            }}
-            animate={{
-              y: offsetY * 0.5,
-            }}
-            transition={{ ease: "easeOut", duration: 0.2 }}
+         <motion.div
+          className="absolute inset-0 w-full h-full"
+          animate={{ y: offsetY * 0.5 }}
+          transition={{ ease: "easeOut", duration: 0.2 }}
+        >
+          <Image
+            src="../blackbuck-1.jpg"
+            alt="Lodges in Velavadar Blackbuck National Park"
+            fill
+            className="object-cover"
+            priority
           />
+        </motion.div>
+
           {/* Content Parallax Effect */}
           <motion.div
             className="relative flex flex-col items-end justify-end z-10 text-white"
@@ -106,74 +107,94 @@ export default function Home() {
 
         {mobileView ? (
           <>
-          <div className="w-full h-[15vh] flex items-center justify-center text-base gap-2 text-earth-faded-green bg-opacity-80 backdrop-blur-sm">
-            Lodges in <span className='text-earth-dark-soil font-bold'>Blackbuck National Park,</span><span className='text-earth-dark-green font-bold'>Velavadar</span>
+          <div className={`w-full h-[100px] flex items-center justify-center text-sm font-semibold gap-2 text-earth-brown bg-opacity-80 backdrop-blur-sm ${mont.className}`}>
+            Lodges in Blackbuck National Park, Velavadar
           </div>
         
-        <div
-          ref={div1Ref}
-          className={`h-[50vh] w-screen flex flex-col items-center justify-center bg-[./homePageDiv3img1.png] bg-cover bg-center ${mont.className}`}
-        >
-          <div className="w-full h-[47vh] flex flex-col items-center justify-center px-4 text-center">
-            <div className="text-xs text-white font-semibold mb-4">The Blackbuck National Park withholds many beautiful lodges that are convenient, comfortable and luxurious in terms of hospitality, locality, in-house naturalist team and staff, and the commitment to preserve the wildlife and culture of Velavadar National Park.</div>
-            <div className="text-sm font-semibold text-white mb-4">The luxurious lodges in Blackbuck National Park Velavadar are enclosed by rustic surroundings and offer picturesque views of wildlife, water bodies, and farmlands.</div>
-            <div className="flex flex-wrap justify-center gap-3">
-              <motion.button className="border-2 border-white px-3 py-2 rounded-full text-xs font-light cursor-pointer"
-                whileHover={{ scale: 1.1, opacity: 0.77 }}
-                whileTap={{ scale: 0.95, opacity: 0.54 }}
-              >
-                <motion.span className="text-white">
-                  <Link href="/contact-us" passHref>Book Now</Link>
-                </motion.span>
-              </motion.button>
-              <motion.button className="border-2 border-white px-3 py-2 rounded-full text-xs font-light cursor-pointer"
-                whileHover={{ scale: 1.1, opacity: 0.77 }}
-                whileTap={{ scale: 0.95, opacity: 0.54 }}
-              >
-                <motion.span className="text-white">
-                  <Link href="/accomodation-in-velavadar" passHref>Tariff</Link>
-                </motion.span>
-              </motion.button>
-              <motion.button className="border-2 border-white px-3 py-2 rounded-full text-xs font-light cursor-pointer"
-                whileHover={{ scale: 1.1, opacity: 0.77 }}
-                whileTap={{ scale: 0.95, opacity: 0.54 }}
-              >
-                <motion.span className="text-white">
-                  <Link href="/things-to-do-velavadar-park" passHref>Things To Do</Link>
-                </motion.span>
-              </motion.button>
-              <motion.button className="border-2 border-white px-3 py-2 rounded-full text-xs font-light cursor-pointer"
-                whileHover={{ scale: 1.1, opacity: 0.77 }}
-                whileTap={{ scale: 0.95, opacity: 0.54 }}
-              >
-                <motion.span className="text-white">
-                  <Link href="/how-to-reach-velavadar" passHref>How To Reach</Link>
-                </motion.span>
-              </motion.button>
+          <motion.div
+            className={`h-[50vh] w-screen flex flex-col items-center justify-center relative ${mont.className}`}
+          >
+            {/* Background Image */}
+            <div className="absolute inset-0 w-full h-full">
+              <Image
+                src="../lodges-in-Velavadar-Bhavnagar-4.jpg"  // Make sure the image is placed in the 'public' directory
+                alt="Lodges in Velavadar Blackbuck National Park"
+                layout="fill"  // This will make the image cover the full div
+                className="object-cover"  // Make sure the image covers the whole div without stretching
+                priority
+              />
             </div>
-          </div>
-        </div>
+
+            {/* Content Overlay */}
+            <div className="relative backdrop-blur-xs z-10 w-full h-full flex flex-col items-center justify-center px-4 text-center">
+              <div className="text-xs text-white font-semibold mb-4">
+                The Blackbuck National Park withholds many beautiful lodges that are convenient, comfortable, and luxurious in terms of hospitality, locality, in-house naturalist team and staff, and the commitment to preserve the wildlife and culture of Velavadar National Park.
+              </div>
+              <div className="text-sm font-semibold text-white mb-4">
+                The luxurious lodges in Blackbuck National Park Velavadar are enclosed by rustic surroundings and offer picturesque views of wildlife, water bodies, and farmlands.
+              </div>
+              <div className="flex flex-wrap justify-center gap-3">
+                <motion.button
+                  className="border-2 border-white px-3 py-2 rounded-full text-xs font-light cursor-pointer"
+                  whileHover={{ scale: 1.1, opacity: 0.77 }}
+                  whileTap={{ scale: 0.95, opacity: 0.54 }}
+                >
+                  <motion.span className="text-white">
+                    <Link href="/contact-us" passHref>Book Now</Link>
+                  </motion.span>
+                </motion.button>
+                <motion.button
+                  className="border-2 border-white px-3 py-2 rounded-full text-xs font-light cursor-pointer"
+                  whileHover={{ scale: 1.1, opacity: 0.77 }}
+                  whileTap={{ scale: 0.95, opacity: 0.54 }}
+                >
+                  <motion.span className="text-white">
+                    <Link href="/accomodation-in-velavadar" passHref>Tariff</Link>
+                  </motion.span>
+                </motion.button>
+                <motion.button
+                  className="border-2 border-white px-3 py-2 rounded-full text-xs font-light cursor-pointer"
+                  whileHover={{ scale: 1.1, opacity: 0.77 }}
+                  whileTap={{ scale: 0.95, opacity: 0.54 }}
+                >
+                  <motion.span className="text-white">
+                    <Link href="/things-to-do-velavadar-park" passHref>Things To Do</Link>
+                  </motion.span>
+                </motion.button>
+                <motion.button
+                  className="border-2 border-white px-3 py-2 rounded-full text-xs font-light cursor-pointer"
+                  whileHover={{ scale: 1.1, opacity: 0.77 }}
+                  whileTap={{ scale: 0.95, opacity: 0.54 }}
+                >
+                  <motion.span className="text-white">
+                    <Link href="/how-to-reach-velavadar" passHref>How To Reach</Link>
+                  </motion.span>
+                </motion.button>
+              </div>
+            </div>
+          </motion.div>
+
         </>
       ) : (
-      <div ref={div1Ref} className={`h-[75vh]  w-screen flex flex-col items-center justify-center ${mont.className}`}>
-        <div className="w-full h-[15vh]  flex items-center justify-center text-xl gap-2 text-earth-faded-green">Lodges in <span className='text-earth-dark-soil font-bold'>Blackbuck National Park,</span><span className='text-earth-dark-green font-bold'>Velavadar</span></div>
-        <div className="w-full h-[60vh] flex flex-col items-center justify-center">
-          <div className="h-[30vh] w-2/3 flex items-center justify-between ">
-            <div className="h-full w-1/2 flex items-center justify-center text-base text-earth-dark-soil">The Blackbuck National Park withholds many beautiful lodges that are convenient, comfortable and luxurious in terms of hospitality, locality, in-house naturalist team and staff, and the commitment to preserve the wildlife and culture of Velavadar National Park. All the lodges in Velavadar are strategically located to make it an easy and pleasant experience for the visitors. The well-maintained lodges are situated nearby the national park that comprises large areas of pale, golden grassland stretching between two seasonal rivers making it exceptionally beautiful for the beholders to witness.</div>
+      <div ref={div1Ref} className={`h-[850px] w-screen flex flex-col items-center justify-center ${mont.className}`}>
+        <div className="w-full h-[150px] font-bold flex items-center justify-center text-xl gap-2 text-earth-brown">Lodges in Blackbuck National Park, Velavadar</div>
+        <div className="w-full h-[650px] flex flex-col items-center justify-center">
+          <div className="h-[300px] w-4/5 flex items-center justify-between ">
+            <div className="h-full w-1/2 flex items-center justify-center text-right text-base pr-7 text-earth-brown">The Blackbuck National Park withholds many beautiful lodges that are convenient, comfortable and luxurious in terms of hospitality, locality, in-house naturalist team and staff, and the commitment to preserve the wildlife and culture of Velavadar National Park. All the lodges in Velavadar are strategically located to make it an easy and pleasant experience for the visitors. The well-maintained lodges are situated nearby the national park that comprises large areas of pale, golden grassland stretching between two seasonal rivers making it exceptionally beautiful for the beholders to witness.</div>
             <motion.div
-              className="relative w-1/3 h-2/3 p-4"
+              className="relative w-1/2 h-full p-4"
             >
               <Image
-                src="./homePageDiv3img1.png"
-                alt={`homePageDiv3img1`}
+                src="../lodges-in-Velavadar-Bhavnagar-4.jpg"
+                alt='Lodges in Velavadar Blackbuck National Park'
                 fill
-                sizes="100vw"
+                // sizes="100vw"
                 className="object-cover"
               />
             </motion.div>
           </div>
-          <div className="h-[15vh] w-2/3 flex items-center justify-start text-left text-base text-earth-faded-soil">The luxurious lodges in Blackbuck National Park Velavadar are enclosed by rustic surroundings and offer picturesque views of wildlife, water bodies, and farmlands. The lodges enjoy good connectivity and are easily accessible from various major cities and countries via road, air, and train. The accommodation options in Velavadar are abundant in greenery, flora and fauna and offer a promisingly comfortable and fun experience for its guests.</div>
-          <div className="h-[10vh] w-2/3 flex items-center justify-between">
+          <div className="h-[250px] w-4/5 flex items-center justify-start text-left text-base text-earth-brown">The luxurious lodges in Blackbuck National Park Velavadar are enclosed by rustic surroundings and offer picturesque views of wildlife, water bodies, and farmlands. The lodges enjoy good connectivity and are easily accessible from various major cities and countries via road, air, and train. The accommodation options in Velavadar are abundant in greenery, flora and fauna and offer a promisingly comfortable and fun experience for its guests.</div>
+          <div className="h-[100px] w-4/5 flex items-center justify-between">
             <motion.button
               className={`relative border-2 border-earth-dark-green px-3 py-2 my-3 rounded-full text-sm font-light cursor-pointer ${mont.className}`}
               whileHover={{
@@ -184,14 +205,14 @@ export default function Home() {
               whileTap={{scale: 0.95,opacity: 0.54}}
             >
               <motion.span 
-                className="relative z-10 text-earth-dark-green"
-                whileHover={{color: 'earth-dark-green', transition: { duration: 0.3 }}}
+                className="relative z-10 text-earth-brown"
+                whileHover={{color: 'earth-brown', transition: { duration: 0.3 }}}
               >
                 <Link href="/contact-us" passHref>Book Now</Link>
               </motion.span>
             </motion.button>
             <motion.button
-              className={`relative border-2 border-earth-dark-green px-3 py-2 my-3 rounded-full text-sm font-light cursor-pointer ${mont.className}`}
+              className={`relative border-2 border-earth-brown px-3 py-2 my-3 rounded-full text-sm font-light cursor-pointer ${mont.className}`}
               whileHover={{
                   scale: 1.1,
                   transition: { duration: 0.3 },
@@ -200,14 +221,14 @@ export default function Home() {
               whileTap={{scale: 0.95,opacity: 0.54}}
             >
               <motion.span 
-                className="relative z-10 text-earth-dark-green"
-                whileHover={{color: 'earth-dark-green', transition: { duration: 0.3 }}}
+                className="relative z-10 text-earth-brown"
+                whileHover={{color: 'earth-brown', transition: { duration: 0.3 }}}
               >
                 <Link href="/accomodation-in-velavadar" passHref>Tariff</Link>
               </motion.span>
             </motion.button>
             <motion.button
-              className={`relative border-2 border-earth-dark-green px-3 py-2 my-3 rounded-full text-sm font-light cursor-pointer ${mont.className}`}
+              className={`relative border-2 border-earth-brown px-3 py-2 my-3 rounded-full text-sm font-light cursor-pointer ${mont.className}`}
               whileHover={{
                   scale: 1.1,
                   transition: { duration: 0.3 },
@@ -216,8 +237,8 @@ export default function Home() {
               whileTap={{scale: 0.95,opacity: 0.54}}
             >
               <motion.span 
-                className="relative z-10 text-earth-dark-green"
-                whileHover={{color: 'earth-dark-green', transition: { duration: 0.3 }}}
+                className="relative z-10 text-earth-brown"
+                whileHover={{color: 'earth-brown', transition: { duration: 0.3 }}}
               >
                 <Link href="/things-to-do-velavadar-park" passHref>Things To Do</Link>
               </motion.span>
@@ -232,68 +253,72 @@ export default function Home() {
               whileTap={{scale: 0.95,opacity: 0.54}}
             >
               <motion.span 
-                className="relative z-10 text-earth-dark-green"
-                whileHover={{color: 'earth-dark-green', transition: { duration: 0.3 }}}
+                className="relative z-10 text-earth-brown"
+                whileHover={{color: 'earth-brown', transition: { duration: 0.3 }}}
               >
                 <Link href="/how-to-reach-velavadar" passHref>How To Reach</Link>
               </motion.span>
             </motion.button>
           </div>
-          <div className="h-[5vh] w-2/3 flex items-center justify-between "></div>
+          <div className="h-[50px] w-2/3 flex items-center justify-between "></div>
         </div>
       </div>
     )}
 
 
-      <div
-      ref={div2Ref}
-      className={`w-screen flex flex-col items-center justify-center`}
-      style={{ height: `calc(25vw + 10vh)` }}>
-        <div className="h-[10vh] w-full flex items-center justify-center text-xl font-bold text-earth-brown">Lodge Gallery</div>
-        <div className="h-[25vw] w-full flex items-center justify-center gap-2 px-2 overflow-hidden">
-          {div2Imgs.map((src, index) => (
+      <div ref={div2Ref} className={`${ mobileView ? 'h-[400px] px-2' : 'h-[600px]'} w-screen flex flex-col items-center justify-center`}>
+        <div className={`${ mobileView ? 'h-[100px]' : 'h-[150px]'} w-full flex items-center justify-center text-xl font-bold text-earth-brown`}> Lodge Gallery</div>
+        <div className={`${mobileView ? 'h-[300px] overflow-x-auto flex-nowrap px-4' : 'h-[450px]'} w-full flex ${mobileView ? '' : 'justify-center'} items-center gap-2 ${mobileView ? 'scrollbar-hide' : ''}`}
+          style={mobileView ? { scrollSnapType: 'x mandatory', scrollBehavior: 'smooth' } : {}}
+        >
+          {div2Imgs.map((img, index) => (
             <motion.div
               key={index}
-              initial={{ x: "100%", opacity: 0 }}
-              animate={(div2InView||div3InView) ? { x: 0, opacity: 1 } : {}}
+              initial={{ x: '100%', opacity: 0 }}
+              animate={div2InView || div3InView ? { x: 0, opacity: 1 } : {}}
               transition={{
                 duration: 0.8,
                 delay: index * 0.17,
-                type: "spring",
+                type: 'spring',
                 stiffness: 77,
                 damping: 17,
               }}
               whileHover={{ scale: 1.05 }}
-              className="h-full w-1/4"
-              style={{
-                backgroundImage: `url('${src}')`,
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-              }}
-            />
+              className={`relative h-full ${
+                mobileView ? 'w-3/4 flex-shrink-0 snap-start' : 'w-1/4'
+              } overflow-hidden rounded-lg`}
+            >
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                className="object-cover"
+                priority={index === 0}
+              />
+            </motion.div>
           ))}
         </div>
       </div>
 
-      <div ref={div3Ref} className='min-h-[95vh] w-screen flex flex-col items-center justify-center relative'>
-        <div className="h-[10vh] w-full flex items-end justify-center text-xl font-bold text-earth-brown">Lodge Facilities at a Glance</div>
-        <div className='min-h-[80vh] w-2/3 flex flex-col items-start justify-start gap-7 p-4'>
+
+
+      <div ref={div3Ref} className={`min-h-[950px] w-screen flex flex-col items-center justify-center relative`}>
+        <div className={`h-[150px] w-full flex items-center justify-center text-xl font-bold text-earth-brown`}>Lodge Facilities at a Glance</div>
+        <div className='min-h-[800px] w-2/3 flex flex-col items-start justify-start gap-7 p-4'>
           <div className="h-3/4 w-full overflow-y-auto">
             {lodgeFacs.map((faq, index) => (
-              <div key={index} className="border-b-2 border-earth-light-soil p-4">
+              <div key={index} className="border-b-2 border-earth-brown p-4">
                 <button 
-                    className={`w-full text-left ${mobileView?"text-sm":"text-lg"} bsd text-earth-faded-soil flex justify-between items-center cursor-pointer ${mont.className}`}
+                    className={`w-full text-left ${mobileView?"text-sm":"text-lg"} bsd text-earth-brown font-semibold flex justify-between items-center cursor-pointer ${mont.className}`}
                     onClick={() => toggleAcc(index)}
                 >
                     <div className={`h-full w-3/4 flex items-center justify-start gap-2`}>
                       <motion.div className={`relative w-1/20 h-1/4 p-4`}>
                         <Image
-                          src="./headerLogoInitialBlack.png"
-                          alt={`headerLogoInitialBlack`}
+                          src="../headerLogoFinalBrown.png"
+                          alt=''
                           fill
-                          sizes="100vw"
-                          className="object-cover opacity-54"
+                          className="object-contain"
                         />
                       </motion.div>
                       {faq.title}
@@ -301,7 +326,7 @@ export default function Home() {
                     <span>{openIndex === index ? "▲" : "▼"}</span>
                 </button>
                 <div 
-                    className={`overflow-hidden ${mont.className} text-earth-faded-green ${mobileView?"text-xs":"text-base"} font-bold transition-all duration-500 ease-in-out ${
+                    className={`overflow-hidden ${mont.className} text-earth-brown ${mobileView?"text-xs":"text-base"} transition-all duration-500 ease-in-out ${
                       openIndex === index ? "opacity-100 mt-2" : "max-h-0 opacity-0"
                   }`}
                 >
