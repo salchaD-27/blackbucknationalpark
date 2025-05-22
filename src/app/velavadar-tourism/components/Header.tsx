@@ -125,7 +125,7 @@ export default function Header({div0View}:HeaderProps){
           transition={{ type: "spring", stiffness: 180, damping: 14 }}
         >
           <Image
-            src={'../Blackbuck-national-park.png'} 
+            src={'/Blackbuck-national-park.png'} 
             alt=""
             fill
             className="object-contain opacity-77 transition-all duration-500"

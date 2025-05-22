@@ -74,7 +74,7 @@ export default function Home() {
               transition={{ ease: "easeOut", duration: 0.2 }}
             >
               <Image
-                src="../safari-velavadar-national-park-10.jpg"
+                src="/safari-velavadar-national-park-10.jpg"
                 alt="Velavadar National Park"
                 fill
                 className="object-cover"
@@ -115,7 +115,7 @@ export default function Home() {
           <>
             <div className="h-[500px] w-full relative flex items-center justify-center px-4 py-6 text-center my-2">
               <Image
-                src="../Wildlife-of-velavadar-1.jpg"
+                src="/Wildlife-of-velavadar-1.jpg"
                 alt="Wildlife of Velavadar Blackbuck National Park"
                 fill
                 sizes="100vw"
@@ -131,7 +131,7 @@ export default function Home() {
 
             <div className="h-[500px] w-full relative flex items-center justify-center px-4 py-6 text-center my-2">
               <Image
-                src="../velavadar-wildlife.jpg"
+                src="/velavadar-wildlife.jpg"
                 alt="Wildlife of Velavadar Blackbuck National Park"
                 fill
                 sizes="100vw"
@@ -164,7 +164,7 @@ export default function Home() {
               <div className="h-full w-1/3 flex items-center justify-center">
                 <motion.div className="relative w-2/3 h-4/5 p-4">
                   <Image
-                    src="../Wildlife-of-velavadar-1.jpg"
+                    src="/Wildlife-of-velavadar-1.jpg"
                     alt="Wildlife of Velavadar Blackbuck National Park"
                     fill
                     sizes="100vw"
@@ -191,7 +191,7 @@ export default function Home() {
               <div className="h-full w-1/3 flex items-center justify-center">
                 <motion.div className="relative w-2/3 h-4/5 p-4">
                   <Image
-                    src="../velavadar-wildlife.jpg"
+                    src="/velavadar-wildlife.jpg"
                     alt="Wildlife of Velavadar Blackbuck National Park"
                     fill
                     sizes="100vw"

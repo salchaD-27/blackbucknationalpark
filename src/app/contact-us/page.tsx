@@ -84,7 +84,7 @@ export default function Home() {
         transition={{ ease: "easeOut", duration: 0.2 }}
       >
         <Image
-          src="../contact-velavadar-bookings.jpg"
+          src="/contact-velavadar-bookings.jpg"
           alt="Contact to book hotels, safari and tours for Velavadar Blackbuck National Park"
           fill
           className="object-cover"

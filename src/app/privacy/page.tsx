@@ -53,7 +53,7 @@ export default function Home() {
         transition={{ ease: "easeOut", duration: 0.2 }}
       >
         <Image
-          src="../safari-velavadar-national-park-10.jpg"
+          src="/safari-velavadar-national-park-10.jpg"
           alt="Velavadar National Park"
           fill
           className="object-cover"

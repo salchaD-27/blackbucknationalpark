@@ -12,19 +12,19 @@ import { Montserrat, Montserrat_Alternates, Montserrat_Subrayada, Montserrat_Und
 const mont = Montserrat({weight: ['400', '700', '900'], style: ['normal', 'italic'], subsets: ['latin', 'latin-ext'], display: 'swap', variable: '--font-p', adjustFontFallback: true })
 
 const div1Imgs = [
-  {src: "../hotels-resorts-tours.jpg", alt: 'Velavadar National Park'},
-  {src: "../blackbuck-1.jpg", alt: 'Hotels and Resorts in Blackbuck National Park'},
-  {src: "../safari-velavadar-national-park-3.jpg", alt: 'Velavadar National Park'},
-  {src: "../responsible-tourism-velavadar.jpg", alt: 'Velavadar National Park'},
-  {src: "../blackbuck-national-park-2.jpg", alt: 'Activities in Velavadar National Park'},
-  {src: "../lodges-in-Velavadar-Bhavnagar-5.jpg", alt: 'Accommodation in Velavadar National Park'},
-  {src: "../Experiences-in-Velavadar-2-1.jpg", alt: 'Velavadar National Park'},
-  {src: "../safari-velavadar-national-park-11.jpg", alt: 'Velavadar National Park'},
-  {src: "../safari-velavadar-national-park-7.jpg", alt: 'Experiences in Velavadar Blackbuck National Park'},
-  {src: "../velavadar-national-park-3.jpg", alt: 'Lodges in Velavadar Blackbuck National Park'},
-  {src: "../safari-velavadar-national-park-8.jpg", alt: 'Velavadar National Park'},
-  {src: "../velavadar-national-park-9.jpg", alt: 'Velavadar National Park'},
-  {src: "../lodges-in-Velavadar-Bhavnagar-1-1.jpg", alt: ''},
+  {src: "/hotels-resorts-tours.jpg", alt: 'Velavadar National Park'},
+  {src: "/blackbuck-1.jpg", alt: 'Hotels and Resorts in Blackbuck National Park'},
+  {src: "/safari-velavadar-national-park-3.jpg", alt: 'Velavadar National Park'},
+  {src: "/responsible-tourism-velavadar.jpg", alt: 'Velavadar National Park'},
+  {src: "/blackbuck-national-park-2.jpg", alt: 'Activities in Velavadar National Park'},
+  {src: "/lodges-in-Velavadar-Bhavnagar-5.jpg", alt: 'Accommodation in Velavadar National Park'},
+  {src: "/Experiences-in-Velavadar-2-1.jpg", alt: 'Velavadar National Park'},
+  {src: "/safari-velavadar-national-park-11.jpg", alt: 'Velavadar National Park'},
+  {src: "/safari-velavadar-national-park-7.jpg", alt: 'Experiences in Velavadar Blackbuck National Park'},
+  {src: "/velavadar-national-park-3.jpg", alt: 'Lodges in Velavadar Blackbuck National Park'},
+  {src: "/safari-velavadar-national-park-8.jpg", alt: 'Velavadar National Park'},
+  {src: "/velavadar-national-park-9.jpg", alt: 'Velavadar National Park'},
+  {src: "/lodges-in-Velavadar-Bhavnagar-1-1.jpg", alt: ''},
 ];
 
 export default function Home() {
@@ -82,7 +82,7 @@ export default function Home() {
           transition={{ ease: "easeOut", duration: 0.2 }}
         >
           <Image
-            src="../responsible-tourism-velavadar.jpg"
+            src="/responsible-tourism-velavadar.jpg"
             alt="Velavadar National Park"
             fill
             className="object-cover"

@@ -29,10 +29,10 @@ const lodgeFacs = [
 ];
 
 const div2Imgs = [
-  {src: "../lodges-in-Velavadar-Bhavnagar-5.jpg", alt:'Accommodation in Velavadar National Park'},
-  {src: "../lodges-in-Velavadar-Bhavnagar-3.jpg", alt:'Activities in Velavadar National Park'},
-  {src: "../safari-velavadar-national-park-11.jpg", alt:'Velavadar National Park'},
-  {src: "../lodges-in-Velavadar-Bhavnagar-1-1.jpg", alt:''},
+  {src: "/lodges-in-Velavadar-Bhavnagar-5.jpg", alt:'Accommodation in Velavadar National Park'},
+  {src: "/lodges-in-Velavadar-Bhavnagar-3.jpg", alt:'Activities in Velavadar National Park'},
+  {src: "/safari-velavadar-national-park-11.jpg", alt:'Velavadar National Park'},
+  {src: "/lodges-in-Velavadar-Bhavnagar-1-1.jpg", alt:''},
 ];
 
 export default function Home() {
@@ -83,7 +83,7 @@ export default function Home() {
           transition={{ ease: "easeOut", duration: 0.2 }}
         >
           <Image
-            src="../blackbuck-1.jpg"
+            src="/blackbuck-1.jpg"
             alt="Lodges in Velavadar Blackbuck National Park"
             fill
             className="object-cover"
@@ -117,7 +117,7 @@ export default function Home() {
             {/* Background Image */}
             <div className="absolute inset-0 w-full h-full">
               <Image
-                src="../lodges-in-Velavadar-Bhavnagar-4.jpg"  // Make sure the image is placed in the 'public' directory
+                src="/lodges-in-Velavadar-Bhavnagar-4.jpg"  // Make sure the image is placed in the 'public' directory
                 alt="Lodges in Velavadar Blackbuck National Park"
                 layout="fill"  // This will make the image cover the full div
                 className="object-cover"  // Make sure the image covers the whole div without stretching
@@ -185,7 +185,7 @@ export default function Home() {
               className="relative w-1/2 h-full p-4"
             >
               <Image
-                src="../lodges-in-Velavadar-Bhavnagar-4.jpg"
+                src="/lodges-in-Velavadar-Bhavnagar-4.jpg"
                 alt='Lodges in Velavadar Blackbuck National Park'
                 fill
                 // sizes="100vw"
@@ -315,7 +315,7 @@ export default function Home() {
                     <div className={`h-full w-3/4 flex items-center justify-start gap-2`}>
                       <motion.div className={`relative w-1/20 h-1/4 p-4`}>
                         <Image
-                          src="../headerLogoFinalBrown.png"
+                          src="/headerLogoFinalBrown.png"
                           alt=''
                           fill
                           className="object-contain"

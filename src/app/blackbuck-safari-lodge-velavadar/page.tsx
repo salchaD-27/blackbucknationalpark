@@ -10,31 +10,31 @@ import { Montserrat, Montserrat_Alternates, Montserrat_Subrayada, Montserrat_Und
 const mont = Montserrat({weight: ['400', '700', '900'], style: ['normal', 'italic'], subsets: ['latin', 'latin-ext'], display: 'swap', variable: '--font-p', adjustFontFallback: true })
 
 const div0Imgs = [
-  { src: "../hotels-near-velavadar-1.jpg", alt: ''},
-  { src: "../Wildlife-at-Blackbuck-National-Park-Velavadar0.jpg", alt: ''},
-  { src: "../1.-Blackbuck-Safari-Lodge.jpg", alt: ''},
-  { src: "../2.-Rooms-at-lackbuck-Safari-Lodge.jpg", alt: ''},
+  { src: "/hotels-near-velavadar-1.jpg", alt: ''},
+  { src: "/Wildlife-at-Blackbuck-National-Park-Velavadar0.jpg", alt: ''},
+  { src: "/1.-Blackbuck-Safari-Lodge.jpg", alt: ''},
+  { src: "/2.-Rooms-at-lackbuck-Safari-Lodge.jpg", alt: ''},
 ];
 
 const div4imgs = [
-  {src: "../jungle-safari.png", alt: '', desc: "Wildlife Safari"},
-  {src: "../24x7-Hot-and-Cold-Water-Supply.png", alt: '', desc: "Hot and Cold Water Supply"},
-  {src: "../Restaurant.png", alt: '', desc: "Multi Cuisine Restaurant"},
-  {src: "../Organic-Toiletries.png", alt: '', desc: "Organic Toiletries"},
-  {src: "../Room-Heating.png", alt: '', desc: "Room Air Conditioning"},
-  {src: "../Car-Parking.png", alt: '', desc: "Car Parking"},
-  {src: "../Complimentary-Tea-Coffee-Maker.png", alt: '', desc: "Tea Coffee Maker"},
-  {src: "../CCTV-Enabled.png", alt: '', desc: "Security Emphasized"},
-  {src: "../Wifi.png", alt: '', desc: "WiFi"},
-  {src: "../COVID-19-Preparedness.png", alt: '', desc: "COVID-19 Preparedness"},
+  {src: "/jungle-safari.png", alt: '', desc: "Wildlife Safari"},
+  {src: "/24x7-Hot-and-Cold-Water-Supply.png", alt: '', desc: "Hot and Cold Water Supply"},
+  {src: "/Restaurant.png", alt: '', desc: "Multi Cuisine Restaurant"},
+  {src: "/Organic-Toiletries.png", alt: '', desc: "Organic Toiletries"},
+  {src: "/Room-Heating.png", alt: '', desc: "Room Air Conditioning"},
+  {src: "/Car-Parking.png", alt: '', desc: "Car Parking"},
+  {src: "/Complimentary-Tea-Coffee-Maker.png", alt: '', desc: "Tea Coffee Maker"},
+  {src: "/CCTV-Enabled.png", alt: '', desc: "Security Emphasized"},
+  {src: "/Wifi.png", alt: '', desc: "WiFi"},
+  {src: "/COVID-19-Preparedness.png", alt: '', desc: "COVID-19 Preparedness"},
 ]
 
 const div5GalleryImages = [
-  { id: 1, src: '../blackbuck-safari-lodge-2.jpg', alt: '' },
-  { id: 2, src: '../blackbuck-safari-lodge.jpg', alt: '' },
-  { id: 3, src: '../hotels-near-velavadar-1.jpg', alt: '' },
-  { id: 4, src: '../resort-in-blackbuck-national-park.jpg', alt: '' },
-  { id: 5, src: '../1.-Blackbuck-Safari-Lodge.jpg', alt: '' },
+  { id: 1, src: '/blackbuck-safari-lodge-2.jpg', alt: '' },
+  { id: 2, src: '/blackbuck-safari-lodge.jpg', alt: '' },
+  { id: 3, src: '/hotels-near-velavadar-1.jpg', alt: '' },
+  { id: 4, src: '/resort-in-blackbuck-national-park.jpg', alt: '' },
+  { id: 5, src: '/1.-Blackbuck-Safari-Lodge.jpg', alt: '' },
 ]
 
 const faqs = [
@@ -216,7 +216,7 @@ export default function Home() {
             >
               <motion.span className="relative z-10 text-earth-brown flex items-center justify-center gap-2">
                 <Image
-                  src="../callIconEarthBrown.png"
+                  src="/callIconEarthBrown.png"
                   alt="Call Icon"
                   width={24}
                   height={24}
@@ -234,7 +234,7 @@ export default function Home() {
             <div className="h-1/2 w-full flex flex-col items-center justify-center">
               <motion.div className="relative w-full h-full flex flex-col items-center justify-center">
                 <Image
-                  src="../hotels-near-velavadar-1.jpg"
+                  src="/hotels-near-velavadar-1.jpg"
                   alt=""
                   fill
                   sizes="100vw"
@@ -284,7 +284,7 @@ export default function Home() {
             </span>
             <motion.div className={`relative w-4/5 ${mobileView?"h-[20vh]":"h-2/3"} p-4 flex flex-col items-center justify-center`}>
               <Image
-                src="../resort-in-blackbuck-national-park.jpg"
+                src="/resort-in-blackbuck-national-park.jpg"
                 alt="bslDiv2img"
                 fill
                 sizes="100vw"

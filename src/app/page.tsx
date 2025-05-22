@@ -29,34 +29,34 @@ const bgConfig=[
 ]
 
 const images = [
-  { src: "./blackbuck-velavadar.jpg", altText: "Velavadar Blackbuck National Park", bgClass: "lp-img-1", info: <Lpimg1/>, link: "/"},
-  { src: "./blackbuck-national-park-2.jpg", altText: "Hotels and Resorts in Blackbuck Velavadar National Park", bgClass: "lp-img-2", info: <Lpimg2/>, link: "/things-to-do-velavadar-park"},
-  { src: "./blackbuck-1.jpg", altText: "Hotels and Resorts in Blackbuck National Park", bgClass: "lp-img-3", info: <Lpimg3/>, link: "/about-velavadar-national-park-bhavnagar"}
+  { src: "/blackbuck-velavadar.jpg", altText: "Velavadar Blackbuck National Park", bgClass: "lp-img-1", info: <Lpimg1/>, link: "/"},
+  { src: "/blackbuck-national-park-2.jpg", altText: "Hotels and Resorts in Blackbuck Velavadar National Park", bgClass: "lp-img-2", info: <Lpimg2/>, link: "/things-to-do-velavadar-park"},
+  { src: "/blackbuck-1.jpg", altText: "Hotels and Resorts in Blackbuck National Park", bgClass: "lp-img-3", info: <Lpimg3/>, link: "/about-velavadar-national-park-bhavnagar"}
 ];
 
 const galleryImages = [
-  { id: 1, src: './safari-velavadar-national-park.jpg', alt: 'Lodges in Velavadar Blackbuck National Park' },
-  { id: 2, src: './velavadar-national-park-4.jpg', alt: 'Safari in Velavadar Blackbuck National Park' },
-  { id: 3, src: './velavadar-national-park-5.jpg', alt: 'Velavadar National Park' },
-  { id: 4, src: './velavadar-national-park-6.jpg', alt: 'Velavadar National Park' },
-  { id: 5, src: './velavadar-national-park-7.jpg', alt: 'Safari in Velavadar Blackbuck National Park' },
-  { id: 6, src: './velavadar-national-park-8.jpg', alt: 'Safari in Velavadar Blackbuck National Park' },
-  { id: 7, src: './velavadar-national-park-9.jpg', alt: 'Safari in Velavadar Blackbuck National Park' },
-  { id: 8, src: './velavadar-national-park-10.jpg', alt: 'Safari in Velavadar Blackbuck National Park' },
-  { id: 9, src: './velavadar-national-park-2.jpg', alt: 'Safari in Velavadar Blackbuck National Park' },
-  { id: 10, src: './velavadar-national-park-11.jpg', alt: 'Safari in Velavadar Blackbuck National Park' },
-  { id: 11, src: './velavadar-national-park-13.jpg', alt: 'Safari in Velavadar Blackbuck National Park' },
-  { id: 12, src: './velavadar-national-park-1.jpg', alt: 'Safari in Velavadar Blackbuck National Park' },
-  { id: 13, src: './velavadar-national-park-12.jpg', alt: 'Safari in Velavadar Blackbuck National Park' },
+  { id: 1, src: '/safari-velavadar-national-park.jpg', alt: 'Lodges in Velavadar Blackbuck National Park' },
+  { id: 2, src: '/velavadar-national-park-4.jpg', alt: 'Safari in Velavadar Blackbuck National Park' },
+  { id: 3, src: '/velavadar-national-park-5.jpg', alt: 'Velavadar National Park' },
+  { id: 4, src: '/velavadar-national-park-6.jpg', alt: 'Velavadar National Park' },
+  { id: 5, src: '/velavadar-national-park-7.jpg', alt: 'Safari in Velavadar Blackbuck National Park' },
+  { id: 6, src: '/velavadar-national-park-8.jpg', alt: 'Safari in Velavadar Blackbuck National Park' },
+  { id: 7, src: '/velavadar-national-park-9.jpg', alt: 'Safari in Velavadar Blackbuck National Park' },
+  { id: 8, src: '/velavadar-national-park-10.jpg', alt: 'Safari in Velavadar Blackbuck National Park' },
+  { id: 9, src: '/velavadar-national-park-2.jpg', alt: 'Safari in Velavadar Blackbuck National Park' },
+  { id: 10, src: '/velavadar-national-park-11.jpg', alt: 'Safari in Velavadar Blackbuck National Park' },
+  { id: 11, src: '/velavadar-national-park-13.jpg', alt: 'Safari in Velavadar Blackbuck National Park' },
+  { id: 12, src: '/velavadar-national-park-1.jpg', alt: 'Safari in Velavadar Blackbuck National Park' },
+  { id: 13, src: '/velavadar-national-park-12.jpg', alt: 'Safari in Velavadar Blackbuck National Park' },
 ];
 
 const div4Images = [
-  { id: 1, src: './safari-in-velavadar-national-park.jpg', alt: '', text: "Jeep Safari" },
-  { id: 2, src: './nature-walk-in-velavadar-national-park.jpg', alt: '', text: "Nature Walk" },
-  { id: 3, src: './hotel-resort-tour.jpg', alt: 'things to do in velavadar', text: "Picnic Meals" },
-  { id: 4, src: './hotel-resort-tours.jpg', alt: '', text: "Interactive Session" },
-  { id: 5, src: './hotel-resort-tours-safaris.jpg', alt: '', text: "Farm Visits" },
-  { id: 6, src: './hotels-resorts-tours.jpg', alt: '', text: "Cycling Trails" },
+  { id: 1, src: '/safari-in-velavadar-national-park.jpg', alt: '', text: "Jeep Safari" },
+  { id: 2, src: '/nature-walk-in-velavadar-national-park.jpg', alt: '', text: "Nature Walk" },
+  { id: 3, src: '/hotel-resort-tour.jpg', alt: 'things to do in velavadar', text: "Picnic Meals" },
+  { id: 4, src: '/hotel-resort-tours.jpg', alt: '', text: "Interactive Session" },
+  { id: 5, src: '/hotel-resort-tours-safaris.jpg', alt: '', text: "Farm Visits" },
+  { id: 6, src: '/hotels-resorts-tours.jpg', alt: '', text: "Cycling Trails" },
 ];
 
 const faqs = [
@@ -347,7 +347,7 @@ export default function Home() {
       {/* Content */}
       <div className={` w-full flex ${mobileView?"flex-col h-[500px]":"h-1/2"} items-center justify-center gap-7 home-page-bg-div2 ${mont.className}`}>
         <motion.div className={`relative ${mobileView?"w-full h-[500px] mt-4":"w-1/3 h-full"} `}>
-          <Image src="./blackbuck-lodge-6-1.jpg" alt='' fill sizes="100vw" className="object-contain"/>
+          <Image src="/blackbuck-lodge-6-1.jpg" alt='' fill sizes="100vw" className="object-contain"/>
           <motion.div className="absolute inset-0 flex items-center justify-center">
             <motion.div className={`relative z-10 text-white px-10 w-full h-2/3 flex flex-col justify-between items-start text-left`}>
               <motion.div 
@@ -369,7 +369,7 @@ export default function Home() {
           </motion.div>
         </motion.div>
         <motion.div className={`relative ${mobileView?"w-full h-[500px] mb-4":"w-1/3 h-full"} `}>
-            <Image src="./4.-Room-Amenities.jpg" alt='' fill sizes="100vw" className="object-contain"/>
+            <Image src="/4.-Room-Amenities.jpg" alt='' fill sizes="100vw" className="object-contain"/>
             <motion.div className="absolute inset-0 flex items-center justify-center">
               <motion.div className={`relative z-10 text-white px-10 w-full h-2/3 flex flex-col justify-between items-end text-right ${mont.className}`}>
                 <motion.div 
@@ -431,7 +431,7 @@ export default function Home() {
               >
                 <motion.span 
                   className="relative z-10 text-earth-brown pl-6"
-                  style={{ backgroundImage: "url('./callIconEarthBrown.png')", backgroundRepeat: "no-repeat", backgroundSize: "contain" }}
+                  style={{ backgroundImage: "url('/callIconEarthBrown.png')", backgroundRepeat: "no-repeat", backgroundSize: "contain" }}
                 >
                   <Link href="tel:+918860680660" passHref>Enquire Now</Link>
                 </motion.span>
@@ -672,10 +672,10 @@ export default function Home() {
         {/* 2x2 Grid */}
         <div className={` w-full px-10 ${mobileView ? 'flex flex-col gap-4 h-[1000px]' : 'grid grid-cols-1 md:grid-cols-2 gap-4 h-[800px]'} ${mont.className}`}>
           {[
-            { src: "./velavadar-national-park-2.jpg", alt:'Safari in Velavadar Blackbuck National Park', title: "Living", description: "The hotels in Blackbuck National Park in Velavadar stand amidst a beautiful hamlet. The lodges offer accommodation in boutique cottages with en-suite modern and elegant bathrooms. Each cottage has all contemporary facilities while preserving regional and cultural architecture." },
-            { src: "./velavadar-national-park-8.jpg", alt:'Safari in Velavadar Blackbuck National Park', title: "Dining", description: "The multi-cuisine restaurant at Velavadar lodges offers magnificent views of the grasslands. These resorts serve exceptional seasonal and regional dishes, blending traditional flavors with modern flair." },
-            { src: "./velavadar-national-park-13.jpg", alt:'Sustainable and Responsible Tourism in Velavadar', title: "Facilities", description: "The Blackbuck National Park hotels are set in a picturesque landscape with water bodies and golden grasslands. Each cottage features a private outdoor sitting space and is equipped with modern comforts while maintaining traditional architecture." },
-            { src: "./velavadar-hotels-tariff-1.jpg", alt:'Safari in Velavadar Blackbuck National Park', title: "Team", description: "We, at Safaris India Tours, are a dedicated team passionate about wildlife and nature. Our goal is to provide guests with a memorable and comfortable stay." },
+            { src: "/velavadar-national-park-2.jpg", alt:'Safari in Velavadar Blackbuck National Park', title: "Living", description: "The hotels in Blackbuck National Park in Velavadar stand amidst a beautiful hamlet. The lodges offer accommodation in boutique cottages with en-suite modern and elegant bathrooms. Each cottage has all contemporary facilities while preserving regional and cultural architecture." },
+            { src: "/velavadar-national-park-8.jpg", alt:'Safari in Velavadar Blackbuck National Park', title: "Dining", description: "The multi-cuisine restaurant at Velavadar lodges offers magnificent views of the grasslands. These resorts serve exceptional seasonal and regional dishes, blending traditional flavors with modern flair." },
+            { src: "/velavadar-national-park-13.jpg", alt:'Sustainable and Responsible Tourism in Velavadar', title: "Facilities", description: "The Blackbuck National Park hotels are set in a picturesque landscape with water bodies and golden grasslands. Each cottage features a private outdoor sitting space and is equipped with modern comforts while maintaining traditional architecture." },
+            { src: "/velavadar-hotels-tariff-1.jpg", alt:'Safari in Velavadar Blackbuck National Park', title: "Team", description: "We, at Safaris India Tours, are a dedicated team passionate about wildlife and nature. Our goal is to provide guests with a memorable and comfortable stay." },
           ].map((item, index) => (
             <motion.div
               key={index}

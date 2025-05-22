@@ -68,7 +68,7 @@ export default function Home() {
           transition={{ ease: "easeOut", duration: 0.2 }}
         >
           <Image
-            src='../responsible-tourism-velavadar.jpg'
+            src='/responsible-tourism-velavadar.jpg'
             alt="Velavadar National Park"
             fill
             className="object-cover"
@@ -127,7 +127,7 @@ export default function Home() {
           </div>
          <div className={`h-[390px] ${mobileView ? "w-full" : "w-1/3"} flex flex-col items-center justify-center border-2 border-earth-brown overflow-hidden relative`}>
           <Image
-            src="../reaching-velavadar-map.jpg"
+            src="/reaching-velavadar-map.jpg"
             alt="Map - How to reach Velavadar Blackbuck National Park, Velavadar Map"
             fill
             className="object-contain"
